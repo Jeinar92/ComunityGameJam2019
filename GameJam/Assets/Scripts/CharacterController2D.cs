@@ -7,7 +7,6 @@ public class CharacterController2D : MonoBehaviour
 {
 
     [SerializeField] float jumpForce = 400f;                                      // Amount of force added when the players jump
-    [Range(0, 100)][SerializeField] float movementSpeed = 20f;                    //Amount of speed when the player moves to the sides    
     [Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;    // How much to smooth out the movement
     [SerializeField] LayerMask isGround;                                          // A mask determining what is ground to the character
     [SerializeField] Transform groundCheck;                                       // A position marking where to check if the player if grounded
