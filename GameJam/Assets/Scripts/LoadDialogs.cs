@@ -9,7 +9,7 @@ public class LoadDialogs : MonoBehaviour
     
     void Start()
     {
-        TextAsset dialogData = Resources.Load<TextAsset>("dialogData");
+        TextAsset dialogData = Resources.Load<TextAsset>("dialogTxt");
 
         string[] data = dialogData.text.Split(new char[] { '\n' });
 
@@ -34,7 +34,13 @@ public class LoadDialogs : MonoBehaviour
 
         foreach (Dialog dialog in dialogArrays)
         {
-            Debug.Log(dialog.text);
+            if (dialog.id == 120002) {
+                Debug.Log(dialog.text);
+            } else if (dialog.reward == 6)
+            {
+                Debug.Log(dialog.text);
+            }
+            
         }
 
     }
