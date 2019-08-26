@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class LoadDialogs : MonoBehaviour
 {
+    [SerializeField] int AlterTextID = 0;
 
     List<Dialog> dialogArrays = new List<Dialog>();
     
     void Start()
     {
-        TextAsset dialogData = Resources.Load<TextAsset>("dialogTxt");
+        TextAsset dialogData = Resources.Load<TextAsset>("dialogData");
 
         string[] data = dialogData.text.Split(new char[] { '\n' });
 
@@ -33,10 +34,8 @@ public class LoadDialogs : MonoBehaviour
         }
 
         foreach (Dialog dialog in dialogArrays)
-        {
-            if (dialog.id == 120002) {
-                Debug.Log(dialog.text);
-            } else if (dialog.reward == 6)
+        { 
+            if (dialog.id == AlterTextID)
             {
                 Debug.Log(dialog.text);
             }

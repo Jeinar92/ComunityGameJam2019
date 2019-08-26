@@ -12,4 +12,14 @@ id,IdLvl,Npc,text,reward
 110003,1,0,The drink quenches thirst food satisfie hunger But gold never quenches gold  Plutarco,
 120002,1,0,No todo lo que brilla es oro,6
 110004,1,1,tu mae,6
-110004,1,1,tu mae,1000000
+110004,1,1,,1000000
+210102,1,1,Dame una moneda y te hare mas rico de lo que nunca has sido,1000000
+210103,1,0,,
+210104,1,,,
+210105,1,,,
+210106,1,,,
+210107,1,,,
+210201,1,,,
+210202,1,,,
+210002,1,,,
+210003,1,,,
