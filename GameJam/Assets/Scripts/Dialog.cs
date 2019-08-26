@@ -5,7 +5,8 @@ using UnityEngine;
 public class Dialog 
 {
     public int id;
-    public string lvlName;
-    public string NPC;
-    public string dialogText;
+    public int Idlvl;
+    public int NPC;
+    public string text;
+    public int reward;
 }

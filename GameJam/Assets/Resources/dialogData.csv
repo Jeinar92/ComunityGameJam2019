@@ -1,0 +1,12 @@
+id,IdLvl,Npc,text,reward
+110001,1,0,Not all that glitters is gold,
+110102,1,1,Give me a coin and you'll be richer than you were before,1000g
+110103,1,1,Do you want more gold? It will only cost you one coin,1000g
+110104,1,1,You have little gold with only one coin I can convert it into thousands,1000g
+110105,1,1,If you want to win you will have to risk,1000g
+110106,1,1,Do you want to take commission?,1000g
+110107,1,1,If you want to have more you must trust me,1000g
+110201,1,2,If you give me everything you have. I will make you richer than you can dream,1000g
+110202,1,2,The true wealth is within you,-1000g
+110002,1,0,The greet breaks the bag,
+110003,1,0,The drink quenches thirst food satisfie hunger But gold never quenches gold  Plutarco,
