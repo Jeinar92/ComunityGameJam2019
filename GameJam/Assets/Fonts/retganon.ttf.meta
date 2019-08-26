@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ce9b486f2833cb84387b3c952635e0f8
+guid: ef73acb5791c2604f8c24268b7525096
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -8,9 +8,9 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: 04b03
+  fontName: Return of Ganon
   fontNames:
-  - 04b03
+  - Return of Ganon
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
