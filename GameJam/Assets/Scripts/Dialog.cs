@@ -1,28 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
-public class Dialog : MonoBehaviour
+public class Dialog 
 {
-    [SerializeField] TextMeshProUGUI textDisplay;
-    [SerializeField] string[] sentences;
-    [SerializeField] float typingSpeed;
-    private int index;
-
-    void Start()
-    {
-        StartCoroutine(Type());
-    }
-    IEnumerator Type()
-    {
-
-        foreach(char letter in sentences[index].ToCharArray())
-        {
-            textDisplay.text += letter;
-            yield return new WaitForSeconds(0.02f* typingSpeed);
-        }
-        
-    }
-    
+    public int id;
+    public string lvlName;
+    public string NPC;
+    public string dialogText;
 }

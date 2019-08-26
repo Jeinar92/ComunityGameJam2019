@@ -10,7 +10,13 @@ public class LoadDialogs : MonoBehaviour
     {
         TextAsset dialogs = Resources.Load<TextAsset>("dialogs");
         string[] data = dialogs.text.Split(new char[] { '\n'});
-        Debug.Log(data.Length);
+        
+        for (int i = 1; i < data.Length -1; i++)
+        {
+            string[] row = data[i].Split(new char[] { ' ' });
+        }
+
+
     }
 
     // Update is called once per frame
