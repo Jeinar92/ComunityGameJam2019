@@ -53,10 +53,10 @@ public class DialogManager : MonoBehaviour
     }
 
     public void AcceptButton()
-        {
+    {
             buttonAction();
             
-        }
+    }
 
     public void DeclineButton()
     {

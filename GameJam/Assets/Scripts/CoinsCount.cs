@@ -5,37 +5,59 @@ using UnityEngine;
 public class CoinsCount : MonoBehaviour
 {
     [SerializeField] int numberOfHonest = 0;
-    [SerializeField] int numberOfCoins;
+    [SerializeField] int baseCoins = 6;  
     [SerializeField] int currentCoins;
+
     [SerializeField] bool added = false;
+    [SerializeField] bool endLvl = false;
+
+    [SerializeField] int liarValue = 1;
+
+    [SerializeField] int finalScore;
+    [SerializeField] int totalScore;
+   
 
      void Start()
     {
-        currentCoins = (numberOfHonest * 1000 )- (numberOfHonest -1) ;
-        Debug.Log(numberOfHonest);
+       
     }
 
     private void Update()
     {
         if (added == true)
         {
+            currentCoins = (numberOfHonest * 1000)  + (baseCoins);
             Debug.Log("Current Coins" + currentCoins);
             added = false;
+           
+        } else if ((liarValue == 0) && (endLvl))
+        {
+            finalScore =  ( ( currentCoins * liarValue) - 6000);
+            totalScore = -finalScore;
+
+        } else if ((liarValue == 1) && (endLvl))
+        {
+            finalScore = ((currentCoins * liarValue) - 6000);
+            totalScore = -finalScore;
         }
-        numberOfCoins = numberOfHonest;
     }
     public void HonestSum()
     {
+        baseCoins--;
         numberOfHonest ++;
         added = true;
-        Debug.Log(numberOfHonest);
     }
     public void HonestSubstract()
     {
-        numberOfHonest --;
-        
-        Debug.Log(numberOfHonest);
+        numberOfHonest = 0;
     }
-
+    public void DeclinedLiar()
+    {
+        liarValue = 1;
+    }
+    public void AceptedLiar()
+    {
+        liarValue = 0;
+    }
 
 }
