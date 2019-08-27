@@ -692,6 +692,7 @@ GameObject:
   - component: {fileID: 3438709222192073290}
   - component: {fileID: 3438709222192073293}
   - component: {fileID: 3438709222192073292}
+  - component: {fileID: 370111392031360781}
   - component: {fileID: 1030322999}
   m_Layer: 9
   m_Name: Alter Ego
@@ -812,6 +813,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 3
+--- !u!114 &370111392031360781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3438709222192073295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b306eaa7116eae349902741009b4e54b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveControl: {fileID: 0}
+  dialogPanel: {fileID: 0}
+  open: 0
+  close: 0
 --- !u!114 &1030322999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -824,12 +841,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e532d9c49a9a534ca7f2bc73c2e7a88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  typingSpeed: 0.02
   AlterTextID: 0
   textDisplay: {fileID: 3438709222843020554}
   dialogPanel: {fileID: 3438709222623983383}
   moveControl: {fileID: 0}
-  talking: 0
+  open: 0
   close: 0
 --- !u!1 &3438709222623983383
 GameObject:

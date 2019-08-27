@@ -5,16 +5,18 @@ using UnityEngine;
 
 public class MovementController : MonoBehaviour
 {
-    public CharacterController2D controller;
-    
+    public CharacterController2D controller;    
 
     [SerializeField] Rigidbody2D rigid;
-    [SerializeField] float runSpeed = 40f;  
+    [SerializeField] float runSpeed = 40f;
+    [SerializeField] int basecoinCount = 6;
+    [SerializeField] int actualCoinCount;
 
     private float horizontalMove = 0f;
     public bool talkingControl = false;
     private bool jump = false;
     public bool close = false;
+    public bool open = false;
 
     private void Awake()
     {
@@ -31,15 +33,11 @@ public class MovementController : MonoBehaviour
             {
             jump = true;
             }  
-        } else if(talkingControl == true)
+        } else if (talkingControl == true)
         {
-            rigid.constraints = RigidbodyConstraints2D.FreezePositionX
-            | RigidbodyConstraints2D.FreezePositionY;
             if (Input.GetButtonDown("Jump"))
             {
-                close = true;
-                rigid.constraints = RigidbodyConstraints2D.None;
-                talkingControl = false;
+                open = true;       
             }
         }
     }   
@@ -49,17 +47,38 @@ public class MovementController : MonoBehaviour
         if (collider.gameObject.tag == "AlterEgo")
         {
             collider.gameObject.GetComponent<SpriteRenderer>().enabled = true;
-            collider.gameObject.tag = "AlterEgoSpoken";
             talkingControl = true;
+            rigid.constraints = RigidbodyConstraints2D.FreezePosition;
+
+           
         }
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
+        if (open == true)
+        {
+            collision.gameObject.tag = "AlterEgoSpoken";
+        }
         if ((close == true) && (collision.gameObject.tag == "AlterEgoSpoken"))
         {
             Destroy(collision.gameObject);
             close = false;
         }
+    }
+    
+    void DeclineButton()
+    {
+        close = true;
+        rigid.constraints = RigidbodyConstraints2D.None;
+        talkingControl = false;
+        actualCoinCount = basecoinCount;
+    }
+    void AcceptButton()
+    {
+        close = true;
+        rigid.constraints = RigidbodyConstraints2D.None;
+        talkingControl = false;
+        actualCoinCount = basecoinCount + 999;
     }
 
     void FixedUpdate()
