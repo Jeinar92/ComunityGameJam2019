@@ -2,19 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class LoadDialogs : MonoBehaviour
 {
     [SerializeField] float typingSpeed = 0.02f;
     [SerializeField] float AlterTextID;
     [SerializeField] TextMeshProUGUI textDisplay;
+    [SerializeField] GameObject dialogPanel;
+
     List<Dialog> dialogArrays = new List<Dialog>();
     private string currentText = " ";
     private string dialogText;
     private bool buttonIsDonw = false;
+    public bool talking;
     
     void Start()
     {
+        
         TextAsset dialogData = Resources.Load<TextAsset>("dialogData");
         string[] data = dialogData.text.Split(new char[] { '\n' });
 
@@ -22,13 +27,31 @@ public class LoadDialogs : MonoBehaviour
         ShowDialog();
     }
 
-    void SpaceButton()
+    private void OnTriggerStay2D(Collider2D other)
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (other.CompareTag("Player"))
         {
-
+            talking = true;
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            OpenPanel();
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            ClosePanel();
+            talking = false;
+        }
+    }
+
     public void ShowDialog()
     {
         foreach (Dialog dialog in dialogArrays)
@@ -46,11 +69,18 @@ public class LoadDialogs : MonoBehaviour
         }
     }
 
-  /*  void ContinueButton()
+    private void OpenPanel()
     {
+       dialogPanel.SetActive(true);
+      
+    }
 
-    }*/
-    
+    private void ClosePanel()
+    {
+        dialogPanel.SetActive(false);
+
+    }
+
     private void ButtonCheck(Dialog dialog)
     {
         if (buttonIsDonw == true)
