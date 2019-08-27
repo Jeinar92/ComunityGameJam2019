@@ -6,14 +6,15 @@ using TMPro;
 public class LoadDialogs : MonoBehaviour
 {
     [SerializeField] float typingSpeed = 0.02f;
-    [SerializeField] int AlterTextID = 0;
+    [SerializeField] float AlterTextID;
     [SerializeField] TextMeshProUGUI textDisplay;
     List<Dialog> dialogArrays = new List<Dialog>();
     private string currentText = " ";
+    private string dialogText;
+    private bool buttonIsDonw = false;
     
     void Start()
     {
-        StartCoroutine(ShowText());
         TextAsset dialogData = Resources.Load<TextAsset>("dialogData");
         string[] data = dialogData.text.Split(new char[] { '\n' });
 
@@ -21,30 +22,47 @@ public class LoadDialogs : MonoBehaviour
         ShowDialog();
     }
 
-
-    IEnumerator ShowText()
+    void SpaceButton()
     {
-        foreach (Dialog dialog in dialogArrays)
+        if (Input.GetKey(KeyCode.Space))
         {
-            if (dialog.id == AlterTextID)
-            {
-                string textyText = dialog.text;
-                Debug.Log(textyText);
-                for (int i = 0; i < textyText.Length; i++)
-                {
-                    currentText = textyText.Substring(0, i);
-                    textDisplay.text = currentText;
-                    yield return new WaitForSeconds(typingSpeed);
-                }
-            }
 
         }
     }
     public void ShowDialog()
     {
-        
+        foreach (Dialog dialog in dialogArrays)
+        {
+            if (dialog.child == true)
+            {
+                if (dialog.id == AlterTextID)
+                {
+                    textDisplay.text = dialog.text;
+                    dialogText = dialog.text;
+                    AlterTextID += 0.01f;
+                    ButtonCheck(dialog);
+                }
+            }            
+        }
     }
-   
+
+  /*  void ContinueButton()
+    {
+
+    }*/
+    
+    private void ButtonCheck(Dialog dialog)
+    {
+        if (buttonIsDonw == true)
+        {
+            if (dialog.id == AlterTextID)
+            {
+                textDisplay.text = dialog.text;
+                dialogText = dialog.text;
+                buttonIsDonw = false;
+            }
+        }
+    }
 
     private void RowArrayFromData(string[] data)
     {
