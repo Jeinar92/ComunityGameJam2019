@@ -596,7 +596,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3438709223896445812}
   - component: {fileID: 3438709223896445813}
-  - component: {fileID: 3438709223896445810}
+  - component: {fileID: 1924717276}
   m_Layer: 9
   m_Name: TriggerEventArea
   m_TagString: Untagged
@@ -644,7 +644,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.5, y: 2.8}
   m_EdgeRadius: 0
---- !u!114 &3438709223896445810
+--- !u!114 &1924717276
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

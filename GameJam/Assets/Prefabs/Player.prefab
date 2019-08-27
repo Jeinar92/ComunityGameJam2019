@@ -122,6 +122,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 3980025459828426523}
+  load: {fileID: 0}
+  talkingControl: 0
   runSpeed: 40
 --- !u!50 &3980025459828426520
 Rigidbody2D:
