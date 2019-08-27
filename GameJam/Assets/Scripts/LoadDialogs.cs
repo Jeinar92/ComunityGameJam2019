@@ -21,7 +21,6 @@ public class LoadDialogs : MonoBehaviour
     
     void Start()
     {
-        
         TextAsset dialogData = Resources.Load<TextAsset>("dialogData");
         string[] data = dialogData.text.Split(new char[] { '\n' });
 
