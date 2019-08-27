@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class LoadDialogs : MonoBehaviour
 {
-    [SerializeField] float typingSpeed = 0.02f;
     [SerializeField] float AlterTextID;
     [SerializeField] TextMeshProUGUI textDisplay;
     [SerializeField] GameObject dialogPanel;
@@ -50,10 +49,29 @@ public class LoadDialogs : MonoBehaviour
                     AlterTextID += 0.01f;
                     ButtonCheck(dialog);
                 }
-            }            
+            }
+            else if(dialog.child != true)
+            {
+                if (dialog.id == AlterTextID)
+                {
+                    textDisplay.text = dialog.text;
+                    dialogText = dialog.text;
+                }
+            }
         }
     }
-
+    private void ButtonCheck(Dialog dialog)
+        {
+            if (buttonIsDonw == true)
+            {
+                if (dialog.id == AlterTextID)
+                {
+                    textDisplay.text = dialog.text;
+                    dialogText = dialog.text;
+                    buttonIsDonw = false;
+                }
+            }
+        }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
@@ -72,20 +90,7 @@ public class LoadDialogs : MonoBehaviour
         dialogPanel.SetActive(false);
         close = false;
         
-    }
-
-    private void ButtonCheck(Dialog dialog)
-    {
-        if (buttonIsDonw == true)
-        {
-            if (dialog.id == AlterTextID)
-            {
-                textDisplay.text = dialog.text;
-                dialogText = dialog.text;
-                buttonIsDonw = false;
-            }
-        }
-    }
+    }    
 
     private void RowArrayFromData(string[] data)
     {
