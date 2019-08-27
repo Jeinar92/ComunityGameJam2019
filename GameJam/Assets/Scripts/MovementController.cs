@@ -5,20 +5,28 @@ using UnityEngine;
 public class MovementController : MonoBehaviour
 {
     public CharacterController2D controller;
+    public LoadDialogs load;
+    public bool talkingControl;
 
     [SerializeField] float runSpeed = 40f;
+    
 
     private float horizontalMove = 0f;
     private bool jump = false;
 
     void Update()
     {
-        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
-
-        if (Input.GetButtonDown("Jump"))
+        talkingControl = load.talking;
+        if (talkingControl == false)
         {
-            jump = true;
+            horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+
+                    if (Input.GetButtonDown("Jump"))
+                    {
+                        jump = true;
+                    }
         }
+        
     }
 
 

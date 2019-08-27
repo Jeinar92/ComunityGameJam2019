@@ -15,7 +15,7 @@ public class LoadDialogs : MonoBehaviour
     private string currentText = " ";
     private string dialogText;
     private bool buttonIsDonw = false;
-    public bool talking;
+    public bool talking = false;
     
     void Start()
     {
