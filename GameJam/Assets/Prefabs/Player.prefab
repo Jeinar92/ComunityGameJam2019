@@ -29,8 +29,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3980025459828426527}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.249, y: -3.531, z: 0}
-  m_LocalScale: {x: 0.53832936, y: 0.5585668, z: 1}
+  m_LocalPosition: {x: -6.249, y: -4.25, z: 0}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children:
   - {fileID: 3980025460069942694}
   m_Father: {fileID: 3980025460871481834}
@@ -74,7 +74,8 @@ SpriteRenderer:
   m_SortingLayerID: 335344765
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: dcc9e6d90d799b84ebd007dd600199f8, type: 3}
+  m_Sprite: {fileID: -8699244288224338811, guid: e14d96d7ad603c247b4e503c37bd0734,
+    type: 3}
   m_Color: {r: 0.8396226, g: 0.2811944, b: 0.7448362, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -122,9 +123,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 3980025459828426523}
-  load: {fileID: 0}
-  talkingControl: 0
+  rigid: {fileID: 3980025459828426520}
   runSpeed: 40
+  talkingControl: 0
+  close: 0
 --- !u!50 &3980025459828426520
 Rigidbody2D:
   serializedVersion: 4
@@ -139,7 +141,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 3
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -159,18 +161,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.023452431, y: 0.043866634}
+  m_Offset: {x: -0.023452431, y: 1.04}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 3.1}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 0.8, y: 2.2}
     newSize: {x: 2, y: 3.1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.4254761, y: 2.5752983}
+  m_Size: {x: 0.98, y: 2.41}
   m_EdgeRadius: 0
 --- !u!1 &3980025460069942695
 GameObject:
@@ -213,7 +215,7 @@ GameObject:
   - component: {fileID: 3980025460871481834}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

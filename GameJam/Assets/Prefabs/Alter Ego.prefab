@@ -449,7 +449,7 @@ GameObject:
   - component: {fileID: 1704099858}
   - component: {fileID: 1704099857}
   m_Layer: 0
-  m_Name: Button (2)
+  m_Name: Accept Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -503,7 +503,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 4e8191f30d12dae4882e13ed314dca42, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 772af2c739dabb543b7b5de60a80a09f, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -542,7 +542,7 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 21300000, guid: a026de85b80eaad448264191a9057df4, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: e6d551242d0794040a0a94e87fec325d, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -571,7 +571,7 @@ GameObject:
   - component: {fileID: 3438709222170941009}
   - component: {fileID: 3438709222170941008}
   m_Layer: 0
-  m_Name: Decline Buton
+  m_Name: Decline Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -692,6 +692,7 @@ GameObject:
   - component: {fileID: 3438709222192073290}
   - component: {fileID: 3438709222192073293}
   - component: {fileID: 3438709222192073292}
+  - component: {fileID: 1030322999}
   m_Layer: 9
   m_Name: Alter Ego
   m_TagString: AlterEgo
@@ -708,9 +709,8 @@ Transform:
   m_GameObject: {fileID: 3438709222192073295}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.07, y: -3.793, z: 0}
-  m_LocalScale: {x: 0.559035, y: 0.57632905, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children:
-  - {fileID: 3438709223896445812}
   - {fileID: 3438709223644622684}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -722,7 +722,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3438709222192073295}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -753,7 +753,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: dcc9e6d90d799b84ebd007dd600199f8, type: 3}
+  m_Sprite: {fileID: -8699244288224338811, guid: e14d96d7ad603c247b4e503c37bd0734,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -777,18 +778,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.00000014901161, y: 0.043298244}
+  m_Offset: {x: 0.16, y: 1.29}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 3.1}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 0.8, y: 2.2}
     newSize: {x: 2, y: 3.1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.5236838, y: 2.5515585}
+  m_Size: {x: 6.0449, y: 3.3447895}
   m_EdgeRadius: 0
 --- !u!50 &3438709222192073292
 Rigidbody2D:
@@ -811,6 +812,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 3
+--- !u!114 &1030322999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3438709222192073295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e532d9c49a9a534ca7f2bc73c2e7a88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typingSpeed: 0.02
+  AlterTextID: 0
+  textDisplay: {fileID: 3438709222843020554}
+  dialogPanel: {fileID: 3438709222623983383}
+  moveControl: {fileID: 0}
+  talking: 0
+  close: 0
 --- !u!1 &3438709222623983383
 GameObject:
   m_ObjectHideFlags: 0
@@ -1079,7 +1099,7 @@ RectTransform:
   m_Children:
   - {fileID: 3438709222623983380}
   m_Father: {fileID: 3438709222192073291}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1146,83 +1166,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!1 &3438709223896445815
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3438709223896445812}
-  - component: {fileID: 3438709223896445813}
-  - component: {fileID: 1165302664}
-  m_Layer: 9
-  m_Name: TriggerEventArea
-  m_TagString: AlterEgo
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3438709223896445812
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3438709223896445815}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3438709222192073291}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &3438709223896445813
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3438709223896445815}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.10347211, y: -0.28097415}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 6.0449, y: 3.3447895}
-  m_EdgeRadius: 0
---- !u!114 &1165302664
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3438709223896445815}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e532d9c49a9a534ca7f2bc73c2e7a88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  typingSpeed: 0.02
-  AlterTextID: 0
-  textDisplay: {fileID: 3438709222843020554}
-  dialogPanel: {fileID: 3438709222623983383}
-  moveControl: {fileID: 0}
-  talking: 0
-  close: 0
 --- !u!1 &3438709224122392315
 GameObject:
   m_ObjectHideFlags: 0
