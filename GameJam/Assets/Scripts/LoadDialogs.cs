@@ -10,12 +10,15 @@ public class LoadDialogs : MonoBehaviour
     [SerializeField] float AlterTextID;
     [SerializeField] TextMeshProUGUI textDisplay;
     [SerializeField] GameObject dialogPanel;
+    [SerializeField] BoxCollider2D boxCollider;
+    [SerializeField] MovementController moveControl;
 
     List<Dialog> dialogArrays = new List<Dialog>();
     private string currentText = " ";
     private string dialogText;
     private bool buttonIsDonw = false;
     public bool talking = false;
+    public bool close;
     
     void Start()
     {
@@ -27,28 +30,12 @@ public class LoadDialogs : MonoBehaviour
         ShowDialog();
     }
 
-    private void OnTriggerStay2D(Collider2D other)
+    void Update()
     {
-        if (other.CompareTag("Player"))
-        {
-            talking = true;
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            OpenPanel();
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
+        close = moveControl.close;
+        if (close == true)
         {
             ClosePanel();
-            talking = false;
         }
     }
 
@@ -69,16 +56,24 @@ public class LoadDialogs : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            OpenPanel();
+        }
+    }
+
     private void OpenPanel()
     {
-       dialogPanel.SetActive(true);
-      
+       dialogPanel.SetActive(true);      
     }
 
     private void ClosePanel()
     {
         dialogPanel.SetActive(false);
-
+        close = false;
+        boxCollider.SetActive(false);
     }
 
     private void ButtonCheck(Dialog dialog)
