@@ -32,11 +32,13 @@ public class MovementController : MonoBehaviour
             }  
         } else if(talkingControl == true)
         {
+            rigid.constraints = RigidbodyConstraints2D.FreezePositionX
+            | RigidbodyConstraints2D.FreezePositionY;
             if (Input.GetButtonDown("Jump"))
             {
                 close = true;
-                talkingControl = false;
                 rigid.constraints = RigidbodyConstraints2D.None;
+                talkingControl = false;
             }
         }
     }   
@@ -44,20 +46,17 @@ public class MovementController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.gameObject.tag == "AlterEgo")
-        {
-            rigid.constraints = RigidbodyConstraints2D.FreezePositionX
-            | RigidbodyConstraints2D.FreezePositionY;
+        {            
             collider.gameObject.tag = "AlterEgoSpoken";
             talkingControl = true;
-            
-            if (close == true)
-            {
-                if (collider.gameObject.tag == "AlterEgoSpoken")
-                {
-                    Destroy(this.gameObject);
-                    close = false;
-                }
-            }
+        }
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if ((close == true) && (collision.gameObject.tag == "AlterEgoSpoken"))
+        {
+            Destroy(collision.gameObject);
+            close = false;
         }
     }
 
