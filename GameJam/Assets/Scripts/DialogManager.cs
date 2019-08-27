@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class DialogManager : MonoBehaviour
 {
-    [SerializeField] MovementController moveControl;
     [SerializeField] GameObject dialogPanel;
     [SerializeField] int actualCoinCount;
     [SerializeField] int baseCoinCount = 6;
@@ -17,9 +16,8 @@ public class DialogManager : MonoBehaviour
     void Update()
     {
         OpenPanel();
-        ClosePanel();
     }
-    private void OpenPanel()
+    public void OpenPanel()
     {
        
         if (open == true)
@@ -28,35 +26,39 @@ public class DialogManager : MonoBehaviour
         }
     }
 
-    private void ClosePanel()
+    public void ClosePanel()
     {
         if (close == true)
         {
             dialogPanel.SetActive(false);
         }
         close = false;
+        Destroy(this.gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            collision.gameObject.GetComponent<SpriteRenderer>().enabled = true;
+            this.gameObject.GetComponent<SpriteRenderer>().enabled = true;
             open = true;
-            
         }
     }
-
+    
     public void AcceptButton()
     {
+        open = false;
         close = true;
         actualCoinCount = baseCoinCount + 999;
         Debug.Log(actualCoinCount);
+        ClosePanel();
     }
     public void DeclineButton()
     {
+        open = false;
         close = true;
         actualCoinCount = baseCoinCount;
         Debug.Log(actualCoinCount);
+        ClosePanel();
     }
 }

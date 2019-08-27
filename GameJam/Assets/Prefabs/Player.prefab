@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3980025459828426526}
   - component: {fileID: 3980025459828426521}
   - component: {fileID: 3980025459828426523}
-  - component: {fileID: 3980025459828426517}
+  - component: {fileID: 3823898921210138060}
   - component: {fileID: 3980025459828426520}
   - component: {fileID: 3980025459828426522}
   m_Layer: 0
@@ -110,7 +110,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &3980025459828426517
+--- !u!114 &3823898921210138060
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,14 +119,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 3980025459828426527}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b265baf5bc97d5743b099d3211e9227b, type: 3}
+  m_Script: {fileID: 11500000, guid: 36541f9fdf1435a4181c90ce35c9b327, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 3980025459828426523}
   rigid: {fileID: 3980025459828426520}
   runSpeed: 40
+  basecoinCount: 6
+  actualCoinCount: 0
   talkingControl: 0
   close: 0
+  open: 0
 --- !u!50 &3980025459828426520
 Rigidbody2D:
   serializedVersion: 4

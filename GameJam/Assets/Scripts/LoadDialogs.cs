@@ -7,8 +7,6 @@ public class LoadDialogs : MonoBehaviour
 {
     [SerializeField] float AlterTextID;
     [SerializeField] TextMeshProUGUI textDisplay;
-    [SerializeField] GameObject dialogPanel;
-    [SerializeField] MovementController moveControl;
 
     List<Dialog> dialogArrays = new List<Dialog>();
     private string currentText = " ";
