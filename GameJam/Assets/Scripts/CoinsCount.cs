@@ -32,12 +32,12 @@ public class CoinsCount : MonoBehaviour
            
         } else if ((liarValue == 0) && (endLvl))
         {
-            finalScore =   -( ( currentCoins * liarValue) - 6000);
+            finalScore =  ( ( currentCoins * liarValue) - 6000);
             totalScore = -finalScore;
 
         } else if ((liarValue == 1) && (endLvl))
         {
-            finalScore = -((currentCoins * liarValue) - 6000);
+            finalScore = ((currentCoins * liarValue) - 6000);
             totalScore = -finalScore;
         }
     }
@@ -51,9 +51,13 @@ public class CoinsCount : MonoBehaviour
     {
         numberOfHonest = 0;
     }
-    public void spokeWithLiar()
+    public void DeclinedLiar()
     {
         liarValue = 1;
+    }
+    public void AceptedLiar()
+    {
+        liarValue = 0;
     }
 
 }
