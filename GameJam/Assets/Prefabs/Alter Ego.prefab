@@ -542,7 +542,7 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 21300000, guid: e6d551242d0794040a0a94e87fec325d, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 5cce2d8ef0968f145b3fc647b3918fc0, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -625,7 +625,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 49b692113bed3284589415d194e3f037, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ebd9d8e7352ba5f4a94cbd182605f630, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -753,7 +753,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 9206373047205022550, guid: 6dd3cd59ee0365e42ae4c29041ef3bcb,
+  m_Sprite: {fileID: 7369726601725857917, guid: 6dd3cd59ee0365e42ae4c29041ef3bcb,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -782,7 +782,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 0.8, y: 2.4}
+    oldSize: {x: 0.8, y: 2.3}
     newSize: {x: 2, y: 3.1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -869,8 +869,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.049987793, y: 135.05}
-  m_SizeDelta: {x: -311.77, y: -378.08}
+  m_AnchoredPosition: {x: 0.049987793, y: 106.33}
+  m_SizeDelta: {x: -311.8, y: -435.64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3438709222623983378
 CanvasRenderer:
@@ -893,15 +893,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.990566, g: 0.20597011, b: 0.18222679, a: 0.65882355}
+  m_Color: {r: 0.15325737, g: 0.4032223, b: 0.7924528, a: 0.7137255}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: aeb12fbe4f5186741964b038f9015627, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 5202d745512ee3a45baf0992697db255, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4

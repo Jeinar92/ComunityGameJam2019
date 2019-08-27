@@ -10,6 +10,7 @@ public class MovementController : MonoBehaviour
 
     [SerializeField] Rigidbody2D rigid;
     [SerializeField] float runSpeed = 40f;  
+
     private float horizontalMove = 0f;
     public bool talkingControl = false;
     private bool jump = false;
@@ -46,7 +47,8 @@ public class MovementController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.gameObject.tag == "AlterEgo")
-        {            
+        {
+            collider.gameObject.GetComponent<SpriteRenderer>().enabled = true;
             collider.gameObject.tag = "AlterEgoSpoken";
             talkingControl = true;
         }

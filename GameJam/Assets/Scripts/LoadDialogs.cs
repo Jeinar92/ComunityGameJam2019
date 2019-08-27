@@ -2,11 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEngine.UI;
 
 public class LoadDialogs : MonoBehaviour
 {
-    [SerializeField] float typingSpeed = 0.02f;
     [SerializeField] float AlterTextID;
     [SerializeField] TextMeshProUGUI textDisplay;
     [SerializeField] GameObject dialogPanel;
@@ -21,7 +19,6 @@ public class LoadDialogs : MonoBehaviour
     
     void Start()
     {
-        
         TextAsset dialogData = Resources.Load<TextAsset>("dialogData");
         string[] data = dialogData.text.Split(new char[] { '\n' });
 
@@ -42,7 +39,7 @@ public class LoadDialogs : MonoBehaviour
     {
         foreach (Dialog dialog in dialogArrays)
         {
-            if (dialog.child == true)
+            if (dialog.child == 1)
             {
                 if (dialog.id == AlterTextID)
                 {
@@ -51,10 +48,29 @@ public class LoadDialogs : MonoBehaviour
                     AlterTextID += 0.01f;
                     ButtonCheck(dialog);
                 }
-            }            
+            }
+            else if(dialog.child == 2)
+            {
+                if (dialog.id == AlterTextID)
+                {
+                    textDisplay.text = dialog.text;
+                    dialogText = dialog.text;
+                }
+            }
         }
     }
-
+    private void ButtonCheck(Dialog dialog)
+        {
+            if (buttonIsDonw == true)
+            {
+                if (dialog.id == AlterTextID)
+                {
+                    textDisplay.text = dialog.text;
+                    dialogText = dialog.text;
+                    buttonIsDonw = false;
+                }
+            }
+        }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
@@ -73,20 +89,7 @@ public class LoadDialogs : MonoBehaviour
         dialogPanel.SetActive(false);
         close = false;
         
-    }
-
-    private void ButtonCheck(Dialog dialog)
-    {
-        if (buttonIsDonw == true)
-        {
-            if (dialog.id == AlterTextID)
-            {
-                textDisplay.text = dialog.text;
-                dialogText = dialog.text;
-                buttonIsDonw = false;
-            }
-        }
-    }
+    }    
 
     private void RowArrayFromData(string[] data)
     {
@@ -104,6 +107,9 @@ public class LoadDialogs : MonoBehaviour
                 int.TryParse(row[2], out dialog.NPC);
                 dialog.text = row[3];
                 int.TryParse(row[4], out dialog.reward);
+                int.TryParse(row[5], out dialog.child);
+                int.TryParse(row[6], out dialog.parentId);
+
 
                 dialogArrays.Add(dialog);
             }
