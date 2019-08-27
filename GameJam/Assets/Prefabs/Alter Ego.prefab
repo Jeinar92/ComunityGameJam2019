@@ -656,7 +656,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 370111392031360781}
-        m_MethodName: DeclineButton
+        m_MethodName: buttonAction
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -666,6 +666,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
+      - m_Target: {fileID: 0}
+        m_MethodName: HonestSubstract
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &3438709222192073295
@@ -815,10 +826,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogPanel: {fileID: 3438709222623983383}
-  actualCoinCount: 0
-  baseCoinCount: 6
+  honestNumber: 0
   open: 0
   close: 0
+  sum: 0
 --- !u!114 &1030322999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -831,7 +842,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e532d9c49a9a534ca7f2bc73c2e7a88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AlterTextID: 110103
+  AlterTextID: 210102
   textDisplay: {fileID: 3438709222843020554}
   open: 0
   close: 0
@@ -1446,8 +1457,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 370111392031360781}
-        m_MethodName: AcceptButton
+      - m_Target: {fileID: 0}
+        m_MethodName: HonestSum
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1456,6 +1467,17 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 1
+        m_CallState: 2
+      - m_Target: {fileID: 370111392031360781}
+        m_MethodName: buttonAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null

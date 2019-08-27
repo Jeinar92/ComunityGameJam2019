@@ -4,22 +4,22 @@ using UnityEngine;
 
 public class DialogManager : MonoBehaviour
 {
-    [SerializeField] GameObject dialogPanel;
-    [SerializeField] int actualCoinCount;
-    [SerializeField] int baseCoinCount = 6;
-
-    public bool open;
-    public bool close;
-
+    [SerializeField] GameObject dialogPanel;                               // Import dialog box   
+    [SerializeField] int honestNumber = 0;                                 // Number of honest NPC
     
+    public bool open;                                                      // Boolean to check whether dialog box is oper
+    public bool close;                                                     // Boolean to check whether dialog box is close
+    public bool sum;                                                       // Boolean to check whether we are speaking to new honest NPC
 
+   
     void Update()
     {
         OpenPanel();
     }
+
+
     public void OpenPanel()
     {
-       
         if (open == true)
         {
             dialogPanel.SetActive(true);
@@ -43,22 +43,24 @@ public class DialogManager : MonoBehaviour
             this.gameObject.GetComponent<SpriteRenderer>().enabled = true;
             open = true;
         }
+        
     }
-    
-    public void AcceptButton()
+    private void buttonAction()
     {
         open = false;
         close = true;
-        actualCoinCount = baseCoinCount + 999;
-        Debug.Log(actualCoinCount);
         ClosePanel();
     }
+
+    public void AcceptButton()
+        {
+            buttonAction();
+            
+        }
+
     public void DeclineButton()
     {
-        open = false;
-        close = true;
-        actualCoinCount = baseCoinCount;
-        Debug.Log(actualCoinCount);
-        ClosePanel();
+        buttonAction();
+        
     }
 }
