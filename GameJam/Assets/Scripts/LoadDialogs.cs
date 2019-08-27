@@ -14,7 +14,7 @@ public class LoadDialogs : MonoBehaviour
     private string currentText = " ";
     private string dialogText;
     private bool buttonIsDonw = false;
-    public bool talking = false;
+    public bool open;
     public bool close;
     
     void Start()
@@ -25,71 +25,17 @@ public class LoadDialogs : MonoBehaviour
         RowArrayFromData(data);
         ShowDialog();
     }
-
-    void Update()
-    {
-        close = moveControl.close;
-        if (close == true)
-        {
-            ClosePanel();
-        }
-    }
-
     public void ShowDialog()
     {
         foreach (Dialog dialog in dialogArrays)
-        {
-            if (dialog.child == 1)
+        {           
+            if (dialog.id == AlterTextID)
             {
-                if (dialog.id == AlterTextID)
-                {
-                    textDisplay.text = dialog.text;
-                    dialogText = dialog.text;
-                    AlterTextID += 0.01f;
-                    ButtonCheck(dialog);
-                }
-            }
-            else if(dialog.child == 2)
-            {
-                if (dialog.id == AlterTextID)
-                {
-                    textDisplay.text = dialog.text;
-                    dialogText = dialog.text;
-                }
-            }
+            textDisplay.text = dialog.text;
+            dialogText = dialog.text;
+            }       
         }
     }
-    private void ButtonCheck(Dialog dialog)
-        {
-            if (buttonIsDonw == true)
-            {
-                if (dialog.id == AlterTextID)
-                {
-                    textDisplay.text = dialog.text;
-                    dialogText = dialog.text;
-                    buttonIsDonw = false;
-                }
-            }
-        }
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            OpenPanel();
-        }
-    }
-
-    private void OpenPanel()
-    {
-       dialogPanel.SetActive(true);      
-    }
-
-   private void ClosePanel()
-    {
-        dialogPanel.SetActive(false);
-        close = false;
-        
-    }    
 
     private void RowArrayFromData(string[] data)
     {
@@ -107,9 +53,6 @@ public class LoadDialogs : MonoBehaviour
                 int.TryParse(row[2], out dialog.NPC);
                 dialog.text = row[3];
                 int.TryParse(row[4], out dialog.reward);
-                int.TryParse(row[5], out dialog.child);
-                int.TryParse(row[6], out dialog.parentId);
-
 
                 dialogArrays.Add(dialog);
             }
