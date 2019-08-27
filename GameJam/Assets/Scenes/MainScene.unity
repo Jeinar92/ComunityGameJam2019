@@ -181,7 +181,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.8, y: 2.2}
+  m_Size: {x: 0.8, y: 2.4}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -456,18 +456,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 864728205}
   m_CullTransparentMesh: 0
---- !u!114 &1000012890 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1924717276, guid: 163399f5b5d596f41b8c5c23d4fd3715,
-    type: 3}
-  m_PrefabInstance: {fileID: 3438709222056667566}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e532d9c49a9a534ca7f2bc73c2e7a88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1486871662
 GameObject:
   m_ObjectHideFlags: 0
@@ -552,7 +540,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1643820679
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1284,6 +1272,6 @@ PrefabInstance:
         type: 3}
       propertyPath: load
       value: 
-      objectReference: {fileID: 1000012890}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03685a2109ea37f4ead95e6362f4486e, type: 3}
