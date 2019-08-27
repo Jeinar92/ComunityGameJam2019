@@ -68,12 +68,11 @@ public class LoadDialogs : MonoBehaviour
        dialogPanel.SetActive(true);      
     }
 
-    private void ClosePanel()
+   private void ClosePanel()
     {
         dialogPanel.SetActive(false);
         close = false;
-        this.gameObject.SetActive(false);
-        Destroy(this.gameObject);
+        
     }
 
     private void ButtonCheck(Dialog dialog)

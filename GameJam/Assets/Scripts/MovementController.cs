@@ -6,11 +6,12 @@ using UnityEngine;
 public class MovementController : MonoBehaviour
 {
     public CharacterController2D controller;
-    public bool talkingControl;
+    
 
     [SerializeField] Rigidbody2D rigid;
     [SerializeField] float runSpeed = 40f;  
     private float horizontalMove = 0f;
+    public bool talkingControl = false;
     private bool jump = false;
     public bool close = false;
 
@@ -40,21 +41,33 @@ public class MovementController : MonoBehaviour
         }
     }   
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (other.CompareTag("AlterEgo"))
+        if (collider.gameObject.tag == "AlterEgo")
         {
-            talkingControl = true;
             rigid.constraints = RigidbodyConstraints2D.FreezePositionX
             | RigidbodyConstraints2D.FreezePositionY;
+            collider.gameObject.tag = "AlterEgoSpoken";
+            talkingControl = true;
+            
+            if (close == true)
+            {
+                if (collider.gameObject.tag == "AlterEgoSpoken")
+                {
+                    Destroy(this.gameObject);
+                    close = false;
+                }
+            }
         }
     }
 
     void FixedUpdate()
     {
-    // Move our character       
-        controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
-        jump = false;
-        
+        if (talkingControl != true)
+        {
+            // Move our character       
+            controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
+            jump = false;
+        }
     }
 }
