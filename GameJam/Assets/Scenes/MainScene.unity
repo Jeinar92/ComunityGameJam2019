@@ -177,7 +177,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Texture: {fileID: 2800000, guid: 65a1232dbdb205847a5e0773e322f9a1, type: 3}
+  m_Texture: {fileID: 2800000, guid: 1b82e0e9674e3f84d9e7094fb4c300a8, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -648,7 +648,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1151519831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -744,9 +744,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ec9b6b33f4c4574d905ff68659c6f82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxSpeed: 0.02
-  characterSpeed: 10
-  background: {fileID: 37551451}
 --- !u!1 &1308676653
 GameObject:
   m_ObjectHideFlags: 0
@@ -1088,8 +1085,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1645412254}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.014, y: 0.0035, z: 0}
-  m_LocalScale: {x: 2.7824972, y: 2.7821128, z: 1}
+  m_LocalPosition: {x: -0.014, y: -3.396, z: 0}
+  m_LocalScale: {x: 2.7824972, y: 0.89305824, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
