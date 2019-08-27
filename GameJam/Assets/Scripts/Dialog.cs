@@ -9,6 +9,6 @@ public class Dialog
     public int NPC;
     public string text;
     public int reward;
-    public bool child;
+    public int child;
     public int parentId;
 }

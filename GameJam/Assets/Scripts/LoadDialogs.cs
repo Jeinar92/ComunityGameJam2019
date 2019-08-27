@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEngine.UI;
 
 public class LoadDialogs : MonoBehaviour
 {
@@ -40,7 +39,7 @@ public class LoadDialogs : MonoBehaviour
     {
         foreach (Dialog dialog in dialogArrays)
         {
-            if (dialog.child == true)
+            if (dialog.child == 1)
             {
                 if (dialog.id == AlterTextID)
                 {
@@ -50,7 +49,7 @@ public class LoadDialogs : MonoBehaviour
                     ButtonCheck(dialog);
                 }
             }
-            else if(dialog.child != true)
+            else if(dialog.child == 2)
             {
                 if (dialog.id == AlterTextID)
                 {
@@ -108,6 +107,9 @@ public class LoadDialogs : MonoBehaviour
                 int.TryParse(row[2], out dialog.NPC);
                 dialog.text = row[3];
                 int.TryParse(row[4], out dialog.reward);
+                int.TryParse(row[5], out dialog.child);
+                int.TryParse(row[6], out dialog.parentId);
+
 
                 dialogArrays.Add(dialog);
             }

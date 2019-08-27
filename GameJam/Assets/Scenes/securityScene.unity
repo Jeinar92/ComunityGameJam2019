@@ -579,5 +579,9 @@ PrefabInstance:
       propertyPath: moveControl
       value: 
       objectReference: {fileID: 346658706}
+    - target: {fileID: 1030322999, guid: 163399f5b5d596f41b8c5c23d4fd3715, type: 3}
+      propertyPath: AlterTextID
+      value: 110103
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 163399f5b5d596f41b8c5c23d4fd3715, type: 3}
