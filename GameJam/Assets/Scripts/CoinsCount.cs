@@ -32,12 +32,12 @@ public class CoinsCount : MonoBehaviour
            
         } else if ((liarValue == 0) && (endLvl))
         {
-            finalScore =  ( ( currentCoins * liarValue) - 6000);
+            finalScore = (6000 -( ( currentCoins * liarValue) + (numberOfHonest)) );
             totalScore = -finalScore;
 
         } else if ((liarValue == 1) && (endLvl))
         {
-            finalScore = ((currentCoins * liarValue) - 6000);
+            finalScore = (  6000 -( (currentCoins * liarValue) + (numberOfHonest)));
             totalScore = -finalScore;
         }
     }
