@@ -10,7 +10,6 @@ public class LoadDialogs : MonoBehaviour
     [SerializeField] float AlterTextID;
     [SerializeField] TextMeshProUGUI textDisplay;
     [SerializeField] GameObject dialogPanel;
-    [SerializeField] BoxCollider2D boxCollider;
     [SerializeField] MovementController moveControl;
 
     List<Dialog> dialogArrays = new List<Dialog>();
@@ -73,7 +72,8 @@ public class LoadDialogs : MonoBehaviour
     {
         dialogPanel.SetActive(false);
         close = false;
-        boxCollider.SetActive(false);
+        this.gameObject.SetActive(false);
+        Destroy(this.gameObject);
     }
 
     private void ButtonCheck(Dialog dialog)

@@ -50,23 +50,11 @@ public class MovementController : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("AlterEgo"))
-        {
-            talkingControl = false;
-            runSpeed = 40f;           
-
-        }
-    }
-
     void FixedUpdate()
     {
-    // Move our character
-        if (talkingControl != true)
-        {
+    // Move our character       
         controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
         jump = false;
-        }
+        
     }
 }
