@@ -7,15 +7,16 @@ public class DialogManager : MonoBehaviour
 {
     [SerializeField] GameObject dialogPanel;                               // Import dialog box   
     [SerializeField] int honestNumber = 0;                                 // Number of honest NPC
+    [SerializeField] DataManager getData;
     
-    
-    public bool open;                                                      // Boolean to check whether dialog box is oper
+    public bool open = false;                                                      // Boolean to check whether dialog box is oper
     public bool close;                                                     // Boolean to check whether dialog box is close
     public bool sum;                                                       // Boolean to check whether we are speaking to new honest NPC
 
    
     void Update()
     {
+        open = getData.openPanel;
         OpenPanel();
     }
 
@@ -26,6 +27,7 @@ public class DialogManager : MonoBehaviour
         {
             dialogPanel.SetActive(true);
         }
+        close = true;
     }
 
     public void ClosePanel()
@@ -35,7 +37,7 @@ public class DialogManager : MonoBehaviour
             dialogPanel.SetActive(false);
         }
         close = false;
-        Destroy(this.gameObject);
+        
     }
 
    
@@ -49,8 +51,7 @@ public class DialogManager : MonoBehaviour
 
     public void AcceptButton()
     {
-            buttonAction();
-            
+        buttonAction();            
     }
 
     public void DeclineButton()

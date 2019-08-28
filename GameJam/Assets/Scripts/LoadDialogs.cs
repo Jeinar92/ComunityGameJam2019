@@ -22,6 +22,7 @@ public class LoadDialogs : MonoBehaviour
         AlterTextID = getData.newAlterId;
         ShowDialog();
     }
+
     void Start()
     {
         TextAsset dialogData = Resources.Load<TextAsset>("dialogData");
@@ -30,6 +31,7 @@ public class LoadDialogs : MonoBehaviour
         RowArrayFromData(data);
         
     }
+
     public void ShowDialog()
     {
         if (panel)

@@ -375,7 +375,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 791
   groundCheck: {fileID: 1316278838618501905}
-  airControl: 0
+  airControl: 1
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -414,6 +414,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newAlterId: 0
+  changePanel: 0
+  openPanel: 0
 --- !u!50 &6069688946863751414
 Rigidbody2D:
   serializedVersion: 4
@@ -434,7 +436,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!222 &5481933635058287142
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -615,7 +617,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5481933635090975531}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1768758615}
+        m_MethodName: AcceptButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &5481933635360975657
@@ -737,7 +750,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5481933635360975652}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1768758615}
+        m_MethodName: DeclineButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &5481933635632037247
@@ -758,7 +782,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5481933635632037240
 RectTransform:
   m_ObjectHideFlags: 0
@@ -983,8 +1007,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AlterTextID: 110106
   textDisplay: {fileID: 5879556165524276312}
+  getData: {fileID: 433380969466216288}
   open: 0
   close: 0
+  panel: 0
 --- !u!114 &1768758615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -999,6 +1025,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogPanel: {fileID: 5481933635632037247}
   honestNumber: 0
+  getData: {fileID: 433380969466216288}
   open: 0
   close: 0
   sum: 0
