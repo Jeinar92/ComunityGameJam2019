@@ -403,7 +403,7 @@ PrefabInstance:
     - target: {fileID: 1964364963425610533, guid: cd571aa1f6230a3469fd6f2930e5e537,
         type: 3}
       propertyPath: m_Name
-      value: ScoresTemplate Canvas
+      value: Canvas
       objectReference: {fileID: 0}
     - target: {fileID: 1964364963425610537, guid: cd571aa1f6230a3469fd6f2930e5e537,
         type: 3}
