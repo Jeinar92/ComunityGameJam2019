@@ -12,6 +12,7 @@ public class DialogManager : MonoBehaviour
     public bool open = false;                                                      // Boolean to check whether dialog box is oper
     public bool close;                                                     // Boolean to check whether dialog box is close
     public bool sum;                                                       // Boolean to check whether we are speaking to new honest NPC
+    public bool talking;
 
    
     void Update()
@@ -28,6 +29,7 @@ public class DialogManager : MonoBehaviour
             if (dialogPanel != null)
             {
                 dialogPanel.SetActive(true);
+                talking = true;
             }
         }
         close = true;
@@ -38,6 +40,7 @@ public class DialogManager : MonoBehaviour
         if (close == true)
         {
             dialogPanel.SetActive(false);
+            talking = false;
         }
         close = false;
         

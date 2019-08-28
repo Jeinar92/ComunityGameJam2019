@@ -10,12 +10,15 @@ public class ControlManager : MonoBehaviour
     [SerializeField] float runSpeed = 40f;
     [SerializeField] int basecoinCount = 6;
     [SerializeField] int actualCoinCount;
+    [SerializeField] DialogManager talk;
+
 
     private float horizontalMove = 0f;
     public bool talkingControl = false;
     private bool jump = false;
     public bool close = false;
     public bool open = false;
+    public bool isTalking;
 
     private void Awake()
     {
@@ -24,6 +27,14 @@ public class ControlManager : MonoBehaviour
 
     void Update()
     {
+        isTalking = talk.talking;
+        if (isTalking)
+        {
+            runSpeed = 0f;
+        } else
+        {
+            runSpeed = 40f;
+        }
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
         if (Input.GetButtonDown("Jump"))
