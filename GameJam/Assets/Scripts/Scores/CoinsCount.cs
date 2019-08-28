@@ -11,8 +11,10 @@ public class CoinsCount : MonoBehaviour
 
     [SerializeField] bool added = false;
     [SerializeField] bool endLvl = false;
+    
 
     [SerializeField] int liarValue = 0;
+    [SerializeField] int postLiarValue = 0;
 
     [SerializeField] int finalScore;
     [SerializeField] int totalScore;
@@ -20,34 +22,40 @@ public class CoinsCount : MonoBehaviour
     [SerializeField] TextMeshProUGUI scoreText;
     [SerializeField] DialogManager liarAcept;
 
-    public bool liarAcepted = false;
+    public bool liarSpoken;
+
 
     private void Start()
     {
         scoreText.text = baseCoins.ToString();
     }
     private void Update()
-    {
-       
+    {       
         liarValue = liarAcept.liarvalue;
         if (added == true)
         {
             Sum();
-
-
         }
-        else if ((liarValue == 1) && (endLvl))
+        else if ((liarValue == 0) && (endLvl))
         {
             finalScore = (6000 -( ( currentCoins * liarValue) + (numberOfHonest)) );
             totalScore = -finalScore;
 
 
-        } else if ((liarValue == 2) && (endLvl))
+        } else if ((liarValue == 1) && (endLvl))
         {
             finalScore = (  6000 -( (currentCoins * liarValue) + (numberOfHonest)));
             totalScore = -finalScore;
-        }
+        }       
         
+        if(liarValue == 1)
+        {
+            currentCoins = 6 - numberOfHonest;
+            scoreText.text = currentCoins.ToString();
+            postLiarValue++;
+            liarSpoken = true;
+            added = false;
+        }
     }
 
     private void Sum()
@@ -56,7 +64,6 @@ public class CoinsCount : MonoBehaviour
         Debug.Log("Current Coins" + currentCoins);
         scoreText.text = currentCoins.ToString();
         added = false;
-       
     }
 
     public void HonestSum()
