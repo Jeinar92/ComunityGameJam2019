@@ -7,32 +7,42 @@ public class LoadDialogs : MonoBehaviour
 {
     [SerializeField] float AlterTextID;
     [SerializeField] TextMeshProUGUI textDisplay;
+    [SerializeField] DataManager getData;
+    
 
     List<Dialog> dialogArrays = new List<Dialog>();
-    private string currentText = " ";
-    private string dialogText;
     private bool buttonIsDonw = false;
     public bool open;
     public bool close;
-    
+    public bool panel = false;
+
+    void Update()
+    {
+        panel = getData.changePanel;
+        AlterTextID = getData.newAlterId;
+        ShowDialog();
+    }
     void Start()
     {
         TextAsset dialogData = Resources.Load<TextAsset>("dialogData");
         string[] data = dialogData.text.Split(new char[] { '\n' });
 
         RowArrayFromData(data);
-        ShowDialog();
+        
     }
     public void ShowDialog()
     {
-        foreach (Dialog dialog in dialogArrays)
-        {           
-            if (dialog.id == AlterTextID)
+        if (panel)
+        {
+            foreach (Dialog dialog in dialogArrays)
             {
-            textDisplay.text = dialog.text;
-            dialogText = dialog.text;
-            }       
+                if (dialog.id == AlterTextID)
+                {
+                textDisplay.text = dialog.text;
+                }       
+            }
         }
+        
     }
 
     private void RowArrayFromData(string[] data)

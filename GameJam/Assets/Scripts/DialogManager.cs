@@ -8,6 +8,7 @@ public class DialogManager : MonoBehaviour
     [SerializeField] GameObject dialogPanel;                               // Import dialog box   
     [SerializeField] int honestNumber = 0;                                 // Number of honest NPC
     
+    
     public bool open;                                                      // Boolean to check whether dialog box is oper
     public bool close;                                                     // Boolean to check whether dialog box is close
     public bool sum;                                                       // Boolean to check whether we are speaking to new honest NPC
@@ -44,6 +45,7 @@ public class DialogManager : MonoBehaviour
         close = true;
         ClosePanel();
     }
+
 
     public void AcceptButton()
     {
