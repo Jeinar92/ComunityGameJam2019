@@ -17,11 +17,6 @@ public class CoinsCount : MonoBehaviour
     [SerializeField] int totalScore;
    
 
-     void Start()
-    {
-       
-    }
-
     private void Update()
     {
         if (added == true)
@@ -40,6 +35,7 @@ public class CoinsCount : MonoBehaviour
             finalScore = (  6000 -( (currentCoins * liarValue) + (numberOfHonest)));
             totalScore = -finalScore;
         }
+        
     }
     public void HonestSum()
     {
@@ -47,10 +43,7 @@ public class CoinsCount : MonoBehaviour
         numberOfHonest ++;
         added = true;
     }
-    public void HonestSubstract()
-    {
-        numberOfHonest = 0;
-    }
+    
     public void DeclinedLiar()
     {
         liarValue = 1;

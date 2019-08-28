@@ -25,7 +25,10 @@ public class DialogManager : MonoBehaviour
     {
         if (open == true)
         {
-            dialogPanel.SetActive(true);
+            if (dialogPanel != null)
+            {
+                dialogPanel.SetActive(true);
+            }
         }
         close = true;
     }
