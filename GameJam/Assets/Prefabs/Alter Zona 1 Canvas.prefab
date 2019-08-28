@@ -110,7 +110,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.11658239, y: 0.089279175}
+  m_Offset: {x: -0.7957163, y: 0.089279175}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -121,7 +121,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 20.111084, y: 43.75553}
+  m_Size: {x: 30.798159, y: 43.75553}
   m_EdgeRadius: 0
 --- !u!114 &5575048346978663797
 MonoBehaviour:
@@ -246,7 +246,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.11658239, y: 0.089279175}
+  m_Offset: {x: -0.7957163, y: 0.089279175}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -257,7 +257,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 20.111084, y: 43.75553}
+  m_Size: {x: 30.798159, y: 43.75553}
   m_EdgeRadius: 0
 --- !u!114 &5575048347700976942
 MonoBehaviour:
@@ -417,7 +417,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.11658239, y: 0.089279175}
+  m_Offset: {x: -0.7957163, y: 0.089279175}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -428,7 +428,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 20.111084, y: 43.75553}
+  m_Size: {x: 30.798159, y: 43.75553}
   m_EdgeRadius: 0
 --- !u!114 &5575048347978336652
 MonoBehaviour:
@@ -623,7 +623,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.11658239, y: 0.089279175}
+  m_Offset: {x: -0.7957163, y: 0.089279175}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -634,7 +634,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 20.111084, y: 43.75553}
+  m_Size: {x: 30.798159, y: 43.75553}
   m_EdgeRadius: 0
 --- !u!114 &5575048348650952022
 MonoBehaviour:
@@ -662,7 +662,7 @@ GameObject:
   - component: {fileID: 5575048348837919739}
   - component: {fileID: 5575048348837919736}
   m_Layer: 5
-  m_Name: Canvas Zona 1 (Alters)
+  m_Name: Alter Zona 1 Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
