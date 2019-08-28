@@ -398,9 +398,11 @@ MonoBehaviour:
   runSpeed: 40
   basecoinCount: 6
   actualCoinCount: 0
+  talk: {fileID: 1768758615}
   talkingControl: 0
   close: 0
   open: 0
+  isTalking: 0
 --- !u!114 &433380969466216288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -619,7 +621,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1768758615}
-        m_MethodName: ButtonAction
+        m_MethodName: ClosePanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -763,7 +765,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1768758615}
-        m_MethodName: ButtonAction
+        m_MethodName: ClosePanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1020,6 +1022,8 @@ MonoBehaviour:
   AlterTextID: 110106
   textDisplay: {fileID: 5879556165524276312}
   getData: {fileID: 433380969466216288}
+  open: 0
+  close: 0
   panel: 0
 --- !u!114 &1768758615
 MonoBehaviour:
@@ -1038,6 +1042,8 @@ MonoBehaviour:
   getData: {fileID: 433380969466216288}
   open: 1
   close: 1
+  sum: 0
+  talking: 0
 --- !u!114 &853365321
 MonoBehaviour:
   m_ObjectHideFlags: 0
