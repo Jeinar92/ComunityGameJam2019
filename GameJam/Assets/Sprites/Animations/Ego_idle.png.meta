@@ -8,6 +8,18 @@ TextureImporter:
   - first:
       213: 7369726601725857917
     second: Ego_idle_1
+  - first:
+      213: 4164953199120947938
+    second: Ego_idle_2
+  - first:
+      213: -2640674865727445641
+    second: Ego_idle_3
+  - first:
+      213: -6015205360232235816
+    second: Ego_idle_4
+  - first:
+      213: 6099858964744681436
+    second: Ego_idle_5
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -51,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 17
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -119,18 +131,18 @@ TextureImporter:
       name: Ego_idle_0
       rect:
         serializedVersion: 2
-        x: 35
+        x: 0
         y: 0
-        width: 80
-        height: 240
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 20
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1519a752dc504e54187bcc7267a0a087
+      spriteID: 6aac8e79352cf6a4cafa7e6eac8eff10
       internalID: 9206373047205022550
       vertices: []
       indices: 
@@ -140,19 +152,103 @@ TextureImporter:
       name: Ego_idle_1
       rect:
         serializedVersion: 2
-        x: 190
+        x: 22
         y: 0
-        width: 80
-        height: 230
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 20
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5baf7ea05f6c0d34db33af21443612fc
+      spriteID: c83442cda37cc584dafbc5b884761878
       internalID: 7369726601725857917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ego_idle_2
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 0
+        width: 20
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d62be6b336342714ba17b95c3585f1b5
+      internalID: 4164953199120947938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ego_idle_3
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 0
+        width: 20
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8c923cdf0f8af04fb9bc05db6a0b471
+      internalID: -2640674865727445641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ego_idle_4
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 0
+        width: 20
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f44cd54adfd43a49a353cf6e4428e36
+      internalID: -6015205360232235816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ego_idle_5
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 0
+        width: 20
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6165b2964989a0e4488eded88418a1c0
+      internalID: 6099858964744681436
       vertices: []
       indices: 
       edges: []
