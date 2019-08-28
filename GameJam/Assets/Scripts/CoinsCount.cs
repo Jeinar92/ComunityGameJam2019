@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class CoinsCount : MonoBehaviour
 {
@@ -15,14 +16,20 @@ public class CoinsCount : MonoBehaviour
 
     [SerializeField] int finalScore;
     [SerializeField] int totalScore;
-   
 
+    [SerializeField] TextMeshProUGUI scoreText;
+
+    private void Start()
+    {
+        scoreText.text = baseCoins.ToString();
+    }
     private void Update()
     {
         if (added == true)
         {
             currentCoins = (numberOfHonest * 1000)  + (baseCoins);
             Debug.Log("Current Coins" + currentCoins);
+            scoreText.text = currentCoins.ToString();
             added = false;
            
         } else if ((liarValue == 0) && (endLvl))
