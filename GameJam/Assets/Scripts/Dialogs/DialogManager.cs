@@ -6,27 +6,24 @@ using UnityEngine.UI;
 public class DialogManager : MonoBehaviour
 {
     [SerializeField] GameObject dialogPanel;                               // Import dialog box   
-    [SerializeField] GameObject liarButton;
-    [SerializeField] GameObject acceptButton;
-    [SerializeField] int honestNumber = 0;                                 // Number of honest NPC
-    [SerializeField] DataManager getData;
-    [SerializeField] IDmanager liarId;
-    
-    public bool open = false;                                                      // Boolean to check whether dialog box is oper
-    public bool close = false;                                                     // Boolean to check whether dialog box is close
+    [SerializeField] GameObject liarButton;                                // Import Liar accept button
+    [SerializeField] GameObject acceptButton;                              // Import Alter accept button
+    [SerializeField] DataManager getData;                                  // Import dataManager
+
+    [SerializeField] int honestNumber = 0;                                 // Number of honest NPC spoken
+    public bool open = false;                                              // Boolean to check whether dialog box is open
+    public bool close = false;                                             // Boolean to check whether dialog box is close
+    public bool openLiarButton = false;                                    // Boolean to check whether liar button is open
     public float id;                                                       // Boolean to check whether we are speaking to new honest NPC
     public bool talking;
    
-    public bool speakinToLiar = false;
-    public bool openButton = false;
     public int liarvalue = 0;
    
     void Update()
     {
         open = getData.openPanel;
-        openButton = getData.openLiarButton;
+        openLiarButton = getData.openLiarButton;
         OpenPanel();
-       
     }
 
 
@@ -34,51 +31,46 @@ public class DialogManager : MonoBehaviour
     {
         if (open == true)
         {
+            talking = true;
+
             if (dialogPanel != null)
             {
-                dialogPanel.SetActive(true);
-                acceptButton.SetActive(true);
-                talking = true;
-                if (openButton == true)
-                {
-                    acceptButton.SetActive(false);
-                    liarButton.SetActive(true);
-                }
-                
+                LiarButtonCheck();
             }
-
         } 
+        close = true;        
+    }
 
-        close = true;
-        
+    private void LiarButtonCheck()
+    {
+        if (openLiarButton == true)
+        {
+            acceptButton.SetActive(false);
+            liarButton.SetActive(true);
+            dialogPanel.SetActive(true);
+        }
+        else
+        {
+            dialogPanel.SetActive(true);
+        }
     }
 
     public void ClosePanel()
     {
         if (close == true)
         {
+            liarButton.SetActive(false);
+            acceptButton.SetActive(true);
             dialogPanel.SetActive(false);
             talking = false;
-
-            
         }
-        close = false;
-        
+        close = false;        
     }
 
-    public void AcceptButton()
+    public void AcceptLiarButton()
     {
-        speakinToLiar = getData.liarSpeaking;
-        if (speakinToLiar)
-        {
-            liarvalue++;
-            speakinToLiar = false;
-            
-        }
+        liarvalue++;   
         ClosePanel();
-
-        
-
     }
 
 }

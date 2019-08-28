@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 1456187658861347224}
   - component: {fileID: 5469964309649112559}
   - component: {fileID: 5039108582848850538}
-  - component: {fileID: 5441722228980576595}
+  - component: {fileID: 3429265147780189554}
   m_Layer: 5
-  m_Name: Alter_1 (1)
-  m_TagString: AlterEgo
+  m_Name: Liar 02
+  m_TagString: Liar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,14 +83,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 2100000, guid: 2f1abdc87bdc7d04690f3baa6fea58fc, type: 2}
-  m_Color: {r: 0.28475437, g: 0.3619578, b: 0.764151, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Texture: {fileID: 2800000, guid: 536a0a8f6f8c4b747a6628e0ebe8007a, type: 3}
+  m_Texture: {fileID: 2800000, guid: b508d5b62838b9f4ca66fe974af7c325, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -123,7 +123,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 30.798159, y: 43.75553}
   m_EdgeRadius: 0
---- !u!114 &5441722228980576595
+--- !u!114 &3429265147780189554
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -132,10 +132,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 21942404405450428}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 102da4fc6db94de47a643ec0889f949c, type: 3}
+  m_Script: {fileID: 11500000, guid: 9e1ec5eb59063324ca478c2c2bad2b1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alterID: 110102
+  liarID: 110103
 --- !u!1 &1869271166290908630
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,10 +219,10 @@ GameObject:
   - component: {fileID: 2818184859600449036}
   - component: {fileID: 2818184859600449139}
   - component: {fileID: 2818184859600449138}
-  - component: {fileID: 2818184859600449137}
+  - component: {fileID: 8648656307503498603}
   m_Layer: 5
-  m_Name: Alter_1
-  m_TagString: AlterEgo
+  m_Name: Liar 01
+  m_TagString: Liar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -289,14 +289,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 2100000, guid: 2f1abdc87bdc7d04690f3baa6fea58fc, type: 2}
-  m_Color: {r: 0.28475437, g: 0.3619578, b: 0.764151, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Texture: {fileID: 2800000, guid: 536a0a8f6f8c4b747a6628e0ebe8007a, type: 3}
+  m_Texture: {fileID: 2800000, guid: b508d5b62838b9f4ca66fe974af7c325, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -329,7 +329,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 30.798159, y: 43.75553}
   m_EdgeRadius: 0
---- !u!114 &2818184859600449137
+--- !u!114 &8648656307503498603
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -338,10 +338,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2818184859600449143}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 102da4fc6db94de47a643ec0889f949c, type: 3}
+  m_Script: {fileID: 11500000, guid: 9e1ec5eb59063324ca478c2c2bad2b1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alterID: 110102
+  liarID: 110102
 --- !u!1 &2818184860460538884
 GameObject:
   m_ObjectHideFlags: 0
@@ -355,7 +355,7 @@ GameObject:
   - component: {fileID: 2818184860460538886}
   - component: {fileID: 2818184860460538885}
   m_Layer: 5
-  m_Name: Mentiroso
+  m_Name: Liar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

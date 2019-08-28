@@ -5,7 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - AlterEgo
-  - AlterUsado
+  - SpokenAlter
+  - SpokenLiar
+  - Liar
   layers:
   - Default
   - TransparentFX
