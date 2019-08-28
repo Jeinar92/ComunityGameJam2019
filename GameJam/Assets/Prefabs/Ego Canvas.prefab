@@ -619,7 +619,18 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1768758615}
-        m_MethodName: AcceptButton
+        m_MethodName: ButtonAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 853365321}
+        m_MethodName: HonestSum
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -752,7 +763,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1768758615}
-        m_MethodName: DeclineButton
+        m_MethodName: ButtonAction
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -967,6 +978,7 @@ GameObject:
   - component: {fileID: 5481933636014645545}
   - component: {fileID: 1768758614}
   - component: {fileID: 1768758615}
+  - component: {fileID: 853365321}
   m_Layer: 5
   m_Name: Dialog System
   m_TagString: Untagged
@@ -1008,8 +1020,6 @@ MonoBehaviour:
   AlterTextID: 110106
   textDisplay: {fileID: 5879556165524276312}
   getData: {fileID: 433380969466216288}
-  open: 0
-  close: 0
   panel: 0
 --- !u!114 &1768758615
 MonoBehaviour:
@@ -1026,9 +1036,28 @@ MonoBehaviour:
   dialogPanel: {fileID: 5481933635632037247}
   honestNumber: 0
   getData: {fileID: 433380969466216288}
-  open: 0
-  close: 0
-  sum: 0
+  open: 1
+  close: 1
+--- !u!114 &853365321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5481933636014645544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fe4d1b4954569b49a0e90460bc7e7bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfHonest: 0
+  baseCoins: 6
+  currentCoins: 0
+  added: 0
+  endLvl: 0
+  liarValue: 1
+  finalScore: 0
+  totalScore: 0
 --- !u!1 &6308263980816798763
 GameObject:
   m_ObjectHideFlags: 0

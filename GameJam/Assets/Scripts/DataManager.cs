@@ -14,6 +14,7 @@ public class DataManager : MonoBehaviour
         {
             IDGetter(collision);
             openPanel = true;
+
         }else if (collision.gameObject.tag == "AlterUsado")
         {
             openPanel = false;
