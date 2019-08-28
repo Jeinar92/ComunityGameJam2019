@@ -4,7 +4,7 @@ using UnityEngine;
 public class PlayerFollow : MonoBehaviour
 {
     [SerializeField] Transform target;
-    [Range (0,10)][SerializeField] float smoothSpeed =10f;
+    [Range (0,50)][SerializeField] float smoothSpeed =10f;
     [SerializeField] Vector3 offSet;
 
     void LateUpdate()
