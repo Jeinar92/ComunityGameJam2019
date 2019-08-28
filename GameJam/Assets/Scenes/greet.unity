@@ -120,18 +120,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &327871106 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1768758615, guid: 837cad0df28544c43b1a8710b6608993,
-    type: 3}
-  m_PrefabInstance: {fileID: 5481933634548415612}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b306eaa7116eae349902741009b4e54b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &778862168 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5481933635058287140, guid: 837cad0df28544c43b1a8710b6608993,
@@ -637,34 +625,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 5481933635090975530, guid: 837cad0df28544c43b1a8710b6608993,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ClosePanel
-      objectReference: {fileID: 0}
-    - target: {fileID: 5481933635360975659, guid: 837cad0df28544c43b1a8710b6608993,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ClosePanel
-      objectReference: {fileID: 0}
-    - target: {fileID: 5481933635360975659, guid: 837cad0df28544c43b1a8710b6608993,
-        type: 3}
-      propertyPath: m_Interactable
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1768758614, guid: 837cad0df28544c43b1a8710b6608993, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 853365321, guid: 837cad0df28544c43b1a8710b6608993, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 919161929422702289, guid: 837cad0df28544c43b1a8710b6608993,
-        type: 3}
-      propertyPath: talk
-      value: 
-      objectReference: {fileID: 327871106}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 837cad0df28544c43b1a8710b6608993, type: 3}
 --- !u!1001 &5575048348179094193
