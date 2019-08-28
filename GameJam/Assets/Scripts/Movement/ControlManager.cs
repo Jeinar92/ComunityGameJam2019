@@ -7,10 +7,11 @@ public class ControlManager : MonoBehaviour
     public CharacterController2D controller;
 
     [SerializeField] Rigidbody2D rigid;
-    [SerializeField] float runSpeed = 40f;
+    public float runSpeed = 40f;
     [SerializeField] int basecoinCount = 6;
     [SerializeField] int actualCoinCount;
     [SerializeField] DialogManager talk;
+    [SerializeField] Pause pause;
 
 
     private float horizontalMove = 0f;
@@ -19,6 +20,8 @@ public class ControlManager : MonoBehaviour
     public bool close = false;
     public bool open = false;
     public bool isTalking;
+    public bool isPaused;
+
 
     private void Awake()
     {
@@ -28,19 +31,24 @@ public class ControlManager : MonoBehaviour
     void Update()
     {
         isTalking = talk.talking;
-        if (isTalking)
+        isPaused = pause.paused;
+
+        if ((isTalking) || (isPaused))
         {
             runSpeed = 0f;
-        } else
+            jump = false;
+        } else if ((!isTalking) || (!isPaused))
         {
             runSpeed = 40f;
+            if (Input.GetButtonDown("Jump"))
+            {
+                jump = true;
+            }
         }
+       
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
-        if (Input.GetButtonDown("Jump"))
-        {
-            jump = true;
-        }
+        
     }
 
     void FixedUpdate()

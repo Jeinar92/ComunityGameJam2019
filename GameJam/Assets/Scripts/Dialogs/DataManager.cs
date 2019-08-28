@@ -6,7 +6,9 @@ public class DataManager : MonoBehaviour
 {
     public float newAlterId;
     public bool changePanel = false;
+    public bool openLiarButton = false;
     public bool openPanel = false;
+    public bool liarSpeaking;
 
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -18,6 +20,11 @@ public class DataManager : MonoBehaviour
         }else if (collision.gameObject.tag == "AlterUsado")
         {
             openPanel = false;
+        } else if (collision.gameObject.tag == "Liar")
+        {
+            openPanel = true;
+            openLiarButton = true;
+
         }
     }
 
