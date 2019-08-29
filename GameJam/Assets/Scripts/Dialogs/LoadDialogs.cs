@@ -8,21 +8,43 @@ public class LoadDialogs : MonoBehaviour
     [SerializeField] float alterTextID;
     [SerializeField] float liarTextID;
     [SerializeField] float normalTextID;
+    [SerializeField] float actualIDText;
+
     [SerializeField] TextMeshProUGUI textDisplay;
     [SerializeField] DataManager getData;
-    
+
+    [SerializeField] bool openAlterButton;
+    [SerializeField] bool openNormalButton;
+    [SerializeField] bool openLiarButton;
+
     List<Dialog> dialogArrays = new List<Dialog>();
     public bool panel = false;
     public bool liarpanel = false;
 
     void Update()
     {
-        panel = getData.changePanel;
-        alterTextID = getData.newAlterId;
         liarTextID = getData.newLiarId;
+        alterTextID = getData.newAlterId;
         normalTextID = getData.newNormalId;
 
+        panel = getData.changePanel;
 
+        openNormalButton = getData.openNormalButton;
+        openAlterButton = getData.openAlterButton;
+        openLiarButton = getData.openLiarButton;
+
+        if (openAlterButton)
+        {
+            actualIDText = alterTextID;
+        }
+        else if (openLiarButton)
+        {
+            actualIDText = liarTextID;
+        }
+        else if (openNormalButton)
+        {
+            actualIDText = normalTextID;
+        }
         ShowDialog();
     }
 
@@ -41,16 +63,8 @@ public class LoadDialogs : MonoBehaviour
         {
             foreach (Dialog dialog in dialogArrays)
             {
-
-                if (dialog.id == alterTextID)
-                {
-                    textDisplay.text = dialog.text;
-                }
-                else if (dialog.id == liarTextID)
-                {
-                    textDisplay.text = dialog.text;
-                }
-                else if (dialog.id == normalTextID)
+                
+                if (dialog.id == actualIDText)
                 {
                     textDisplay.text = dialog.text;
                 }
