@@ -7,27 +7,27 @@ public class Main_Menu : MonoBehaviour
 {
     public void PlayButton()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(4);
     }
 
     public void BackButton()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(0);
     }
 
     public void ArchivesButton()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(1);
     }
 
     public void CreditButton()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(2);
     }
 
     public void ScoresButton()
     {
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene(3);
     }
 
    

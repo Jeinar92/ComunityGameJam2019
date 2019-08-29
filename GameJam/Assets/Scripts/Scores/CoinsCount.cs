@@ -5,8 +5,8 @@ using TMPro;
 
 public class CoinsCount : MonoBehaviour
 {
-    [SerializeField] int alterAccepted = 0;                                //Total number of Alter acepted
-    [SerializeField] int afterLiar_AlterAccepted = 0;                                //Current number of Alter acepted
+    [SerializeField] int alterAccepted = 0;                                 //Total number of Alter acepted
+    [SerializeField] int afterLiar_AlterAccepted = 0;                       //Current number of Alter acepted
     [SerializeField] int baseCoins = 6;                                     //Coins given at start
     [SerializeField] int currentCoins;                                      // Coins updated in base to base coins and number of alter acepted
 
@@ -17,8 +17,9 @@ public class CoinsCount : MonoBehaviour
     [SerializeField] int liarValue = 0;                                     // Its value is 1 if Liar is acepted and 0 if not or not spoken
     [SerializeField] int postLiarValue = 0;                                 // int to save liar value before it gets reset
 
-    [SerializeField] int finalScore;                                        // int where we save formula of final score of the level
-    [SerializeField] int totalScore;                                        // - finalscore
+    [SerializeField] int finalScore;                                       // int where we save formula of final score of the level
+    [SerializeField] string totalScore;                                    // negative finalscore saved on a string
+    [SerializeField] int highestScore;                                     // int where we save the highest Score obtained                               
 
     [SerializeField] TextMeshProUGUI scoreText;                             // TMpro import for changing scoreText
     [SerializeField] DialogManager liarAcept;                               // Import script DialogManager to get info from it
@@ -37,17 +38,14 @@ public class CoinsCount : MonoBehaviour
         {
             Sum();
         }
-        else if ((liarValue == 0) && (endLvl))
+        
+        if (endLvl)
         {
             finalScore = (6000 - ((currentCoins * liarValue) + (alterAccepted)));
-            totalScore = -finalScore;
+            totalScore = (-finalScore).ToString();
+            Debug.Log("Total Score : " + totalScore);
 
-
-        }
-        else if ((liarValue == 1) && (endLvl))
-        {
-            finalScore = (6000 - ((currentCoins * liarValue) + (alterAccepted)));
-            totalScore = -finalScore;
+            PlayerPrefs.SetString("totalScore", totalScore);
         }
 
         LiarValueCheck();

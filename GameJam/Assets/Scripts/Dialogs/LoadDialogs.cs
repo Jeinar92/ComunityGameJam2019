@@ -5,17 +5,17 @@ using TMPro;
 
 public class LoadDialogs : MonoBehaviour
 {
-    [SerializeField] float alterTextID;
-    [SerializeField] float liarTextID;
-    [SerializeField] float normalTextID;
-    [SerializeField] float actualIDText;
+    [SerializeField] float alterTextID;                                      // float with id to get from alter on collision
+    [SerializeField] float liarTextID;                                       // float with id to get from liar on collision
+    [SerializeField] float normalTextID;                                     // float with id to get from normal on collision
+    [SerializeField] float actualIDText;                                     // float with id to store actual ID displaying
 
-    [SerializeField] TextMeshProUGUI textDisplay;
-    [SerializeField] DataManager getData;
-
-    [SerializeField] bool openAlterButton;
-    [SerializeField] bool openNormalButton;
-    [SerializeField] bool openLiarButton;
+    [SerializeField] TextMeshProUGUI textDisplay;                            // Variable to change or text on screen
+    [SerializeField] DataManager getData;                                    // Importing DataManager script
+        
+    [SerializeField] bool openAlterButton;                                   //bool import to know wheter alter accept button is open or not
+    [SerializeField] bool openNormalButton;                                  //bool import to know wheter normal accept button is open or not
+    [SerializeField] bool openLiarButton;                                    //bool import to know wheter liar accept button is open or not
 
     List<Dialog> dialogArrays = new List<Dialog>();
     public bool panel = false;

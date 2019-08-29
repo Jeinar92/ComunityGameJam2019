@@ -8,8 +8,8 @@ id,IdLvl,Npc,text,reward
 110107,1,1,If you want to have more you must trust me,1000
 110201,1,2,If you give me everything you have. I will make you richer than you can dream,1000
 110202,1,2,The true wealth is within you,-1000
-110002,1,0,The greet breaks the bag,
-110003,1,0,The drink quenches thirst food satisfie hunger  But gold never quenches gold  Plutarco,
+110002,1,0,The greet breaks the bag The drink quenches thirst food satisfie hunger  But gold never quenches gold  Plutarco ,
+110003,1,0,,
 120002,1,0,No todo lo que brilla es oro,6
 110004,1,1,tu mae,6
 110004,1,1,,1000000
