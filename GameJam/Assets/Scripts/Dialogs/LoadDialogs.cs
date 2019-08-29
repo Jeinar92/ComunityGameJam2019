@@ -6,20 +6,19 @@ using TMPro;
 public class LoadDialogs : MonoBehaviour
 {
     [SerializeField] float AlterTextID;
+    [SerializeField] float LiarTextID;
     [SerializeField] TextMeshProUGUI textDisplay;
     [SerializeField] DataManager getData;
     
-
     List<Dialog> dialogArrays = new List<Dialog>();
-    private bool buttonIsDonw = false;
-    public bool open;
-    public bool close;
     public bool panel = false;
 
     void Update()
     {
         panel = getData.changePanel;
         AlterTextID = getData.newAlterId;
+        LiarTextID = getData.newLiarId;
+
         ShowDialog();
     }
 
@@ -40,8 +39,12 @@ public class LoadDialogs : MonoBehaviour
             {
                 if (dialog.id == AlterTextID)
                 {
-                textDisplay.text = dialog.text;
-                }       
+                    textDisplay.text = dialog.text;
+                }
+                else if (dialog.id == LiarTextID)
+                {
+                    textDisplay.text = dialog.text;
+                }
             }
         }
         
