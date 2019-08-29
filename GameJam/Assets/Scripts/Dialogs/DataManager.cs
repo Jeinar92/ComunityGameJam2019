@@ -6,20 +6,26 @@ public class DataManager : MonoBehaviour
 {
     public float newAlterId;                                    //Alter Id got from collision
     public float newLiarId;                                     //Liar id got from collision
+    public float newNormalId;                                   //Normal id got from collision
     public bool changePanel = false;                            // bool to load new text on panel on collision
-    public bool openLiarButton = false;                         //Bool to open liar button on collision
     public bool openPanel = false;                              //Bool to open panel on collision
+    public bool openLiarButton = false;                         //Bool to open liar accept button on collision
+    public bool openNormalButton = false;                       //Bool to open normal accept button on collision
+    public bool openAlterButton = false;                        //Bool to open alter accept button on collision
 
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "AlterEgo")
         {
-            IDGetter(collision);
+            AlterIDGetter(collision);
             openPanel = true;
+            openAlterButton = true;
 
-        }else if (collision.gameObject.tag == "SpokenAlter")
+        }
+        else if (collision.gameObject.tag == "SpokenAlter")
         {
             openPanel = false;
+            openAlterButton = false;
         }
         else if (collision.gameObject.tag == "Liar")
         {
@@ -31,37 +37,60 @@ public class DataManager : MonoBehaviour
         {
             openPanel = false;
             openLiarButton = false;
+
         }
+        else if (collision.gameObject.tag == "NormalObject")
+        {
+            NormalIDGetter(collision);
+            openPanel = true;
+            openNormalButton = true;
+        }
+        else if (collision.gameObject.tag == "SpokenNormal")
+        {
+            openPanel = false;
+            openNormalButton = false;
+        }
+        
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    void AlterIDGetter(Collider2D collision)
     {
-        openPanel = false;
-    }
+        IDmanager alterManager = AlterIDGet(collision);
 
-    void IDGetter(Collider2D collision)
-    {
-        IDmanager manager = IDget(collision);
-
-        IDCompare(collision, manager);
+        AlterIDCompare(collision, alterManager);
     }
 
     void LiarIDGetter (Collider2D collision)
     {
         LiarIDManager liarManager = IDLiarGet(collision);
 
-        IDLiarCompare(collision, liarManager);
+        LiarIDCompare(collision, liarManager);
     }
 
-    private IDmanager IDget(Collider2D collision)
+    void NormalIDGetter(Collider2D collision)
+    {
+        NormalIDManager normalManager = NormalIDGet(collision);
+
+        NormalIDCompare(collision, normalManager);
+    }
+
+    private IDmanager AlterIDGet(Collider2D collision)
     {      
         collision.gameObject.name = "Alter_01";
-        GameObject go = GameObject.Find("Alter_01");
-        IDmanager manager = go.GetComponent<IDmanager>();
-        newAlterId = manager.alterID;
-        return manager;
+        GameObject alterGo = GameObject.Find("Alter_01");
+        IDmanager alterManager = alterGo.GetComponent<IDmanager>();
+        newAlterId = alterManager.alterID;
+        return alterManager;
     }
 
+    private NormalIDManager NormalIDGet(Collider2D collision)
+    {
+        collision.gameObject.name = "normalObject";
+        GameObject normalGO = GameObject.Find("normalObject");
+        NormalIDManager normalManager = normalGO.GetComponent<NormalIDManager>();
+        newNormalId = normalManager.ID;
+        return normalManager;
+    }
     private LiarIDManager IDLiarGet(Collider2D collision)
     {
         collision.gameObject.name = "Liar";
@@ -71,7 +100,18 @@ public class DataManager : MonoBehaviour
         return liarManager;
     }
 
-    private void IDLiarCompare(Collider2D collision, LiarIDManager liarManager)
+    private void NormalIDCompare(Collider2D collision, NormalIDManager normalManager)
+    {
+        if (newNormalId == normalManager.ID)
+        {
+            changePanel = true;
+            Debug.Log(newNormalId);
+            collision.gameObject.name = "SpokenNormal";
+            collision.gameObject.tag = "SpokenNormal";
+        }
+    }
+
+    private void LiarIDCompare(Collider2D collision, LiarIDManager liarManager)
     {
         if (newLiarId == liarManager.liarID)
         {
@@ -81,8 +121,7 @@ public class DataManager : MonoBehaviour
             collision.gameObject.tag = "SpokenLiar";
         }
     }
-
-    private void IDCompare(Collider2D collision, IDmanager manager)
+    private void AlterIDCompare(Collider2D collision, IDmanager manager)
     {
         if (newAlterId == manager.alterID)
         {

@@ -8,6 +8,7 @@ TagManager:
   - SpokenAlter
   - SpokenLiar
   - Liar
+  - SecondLiar
   layers:
   - Default
   - TransparentFX

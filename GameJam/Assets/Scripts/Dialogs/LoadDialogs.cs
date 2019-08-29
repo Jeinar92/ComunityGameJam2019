@@ -5,19 +5,23 @@ using TMPro;
 
 public class LoadDialogs : MonoBehaviour
 {
-    [SerializeField] float AlterTextID;
-    [SerializeField] float LiarTextID;
+    [SerializeField] float alterTextID;
+    [SerializeField] float liarTextID;
+    [SerializeField] float normalTextID;
     [SerializeField] TextMeshProUGUI textDisplay;
     [SerializeField] DataManager getData;
     
     List<Dialog> dialogArrays = new List<Dialog>();
     public bool panel = false;
+    public bool liarpanel = false;
 
     void Update()
     {
         panel = getData.changePanel;
-        AlterTextID = getData.newAlterId;
-        LiarTextID = getData.newLiarId;
+        alterTextID = getData.newAlterId;
+        liarTextID = getData.newLiarId;
+        normalTextID = getData.newNormalId;
+
 
         ShowDialog();
     }
@@ -37,11 +41,16 @@ public class LoadDialogs : MonoBehaviour
         {
             foreach (Dialog dialog in dialogArrays)
             {
-                if (dialog.id == AlterTextID)
+
+                if (dialog.id == alterTextID)
                 {
                     textDisplay.text = dialog.text;
                 }
-                else if (dialog.id == LiarTextID)
+                else if (dialog.id == liarTextID)
+                {
+                    textDisplay.text = dialog.text;
+                }
+                else if (dialog.id == normalTextID)
                 {
                     textDisplay.text = dialog.text;
                 }
