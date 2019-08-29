@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class DataManager : MonoBehaviour
 {
-    public float newAlterId;
-    public float newLiarId;
-    public bool changePanel = false;
-    public bool openLiarButton = false;
-    public bool openPanel = false;
+    public float newAlterId;                                    //Alter Id got from collision
+    public float newLiarId;                                     //Liar id got from collision
+    public bool changePanel = false;                            // bool to load new text on panel on collision
+    public bool openLiarButton = false;                         //Bool to open liar button on collision
+    public bool openPanel = false;                              //Bool to open panel on collision
 
     private void OnTriggerStay2D(Collider2D collision)
     {

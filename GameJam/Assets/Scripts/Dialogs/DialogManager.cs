@@ -8,18 +8,18 @@ public class DialogManager : MonoBehaviour
     [SerializeField] GameObject dialogPanel;                               // Import dialog box   
     [SerializeField] GameObject liarButton;                                // Import Liar accept button
     [SerializeField] GameObject acceptButton;                              // Import Alter accept button
-    [SerializeField] DataManager getData;                                  // Import dataManager
-    [SerializeField] CoinsCount coins;
+    [SerializeField] DataManager getData;                                  // Import dataManager script
+    [SerializeField] CoinsCount coins;                                     // Import cains script
 
     [SerializeField] int honestNumber = 0;                                 // Number of honest NPC spoken
     public bool open = false;                                              // Boolean to check whether dialog box is open
     public bool close = false;                                             // Boolean to check whether dialog box is close
     public bool openLiarButton = false;                                    // Boolean to check whether liar button is open
     public float id;                                                      
-    public bool talking;                                                    // Boolean to check whether we are speaking to new honest NPC
+    public bool talking;                                                    // Boolean to get the import from Coins Script check whether we are speaking to new honest NPC
     public bool liarSpoken = false;
 
-    public int liarvalue = 0;
+    public int liarvalue = 0;                                             // Int to export if liar was spoken
    
     void Update()
     {
@@ -33,7 +33,6 @@ public class DialogManager : MonoBehaviour
         }
         OpenPanel();
     }
-
 
     public void OpenPanel()
     {
