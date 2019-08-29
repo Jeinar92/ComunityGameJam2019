@@ -72,7 +72,4 @@ public class CoinsCount : MonoBehaviour
             numberOfHonest++;
             added = true;        
     }
-    
-   
-
 }
