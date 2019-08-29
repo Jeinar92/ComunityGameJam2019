@@ -38,8 +38,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -406.2, y: -220.89998}
-  m_SizeDelta: {x: 16, y: 44}
+  m_AnchoredPosition: {x: -401, y: -220.89998}
+  m_SizeDelta: {x: 20, y: 44}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!50 &5575048346978663801
 Rigidbody2D:
@@ -83,14 +83,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 2100000, guid: 2f1abdc87bdc7d04690f3baa6fea58fc, type: 2}
-  m_Color: {r: 0.9433962, g: 0.12014952, b: 0.12014952, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Texture: {fileID: 2800000, guid: 536a0a8f6f8c4b747a6628e0ebe8007a, type: 3}
+  m_Texture: {fileID: 2800000, guid: 013e5c216f340f046a5651b37ce2d64a, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -175,7 +175,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 5, y: -224}
-  m_SizeDelta: {x: 16, y: 44}
+  m_SizeDelta: {x: 20, y: 44}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!50 &5575048347700976914
 Rigidbody2D:
@@ -219,14 +219,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 2100000, guid: 2f1abdc87bdc7d04690f3baa6fea58fc, type: 2}
-  m_Color: {r: 0.9433962, g: 0.12014952, b: 0.12014952, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Texture: {fileID: 2800000, guid: 536a0a8f6f8c4b747a6628e0ebe8007a, type: 3}
+  m_Texture: {fileID: 2800000, guid: 013e5c216f340f046a5651b37ce2d64a, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -321,6 +321,8 @@ GameObject:
   - component: {fileID: 5575048347978336654}
   - component: {fileID: 5575048347978336655}
   - component: {fileID: 5575048347978336652}
+  - component: {fileID: 866107998}
+  - component: {fileID: 866107997}
   m_Layer: 5
   m_Name: Alter_1
   m_TagString: AlterEgo
@@ -346,7 +348,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -569, y: -220.89998}
-  m_SizeDelta: {x: 16, y: 44}
+  m_SizeDelta: {x: 20, y: 44}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!50 &5575048347978336752
 Rigidbody2D:
@@ -390,14 +392,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 2100000, guid: 2f1abdc87bdc7d04690f3baa6fea58fc, type: 2}
-  m_Color: {r: 0.9433962, g: 0.12014952, b: 0.12014952, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Texture: {fileID: 2800000, guid: 536a0a8f6f8c4b747a6628e0ebe8007a, type: 3}
+  m_Texture: {fileID: 2800000, guid: 013e5c216f340f046a5651b37ce2d64a, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -443,6 +445,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alterID: 110102
+--- !u!111 &866107998
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5575048347978336650}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: a80b77a2a2b1b594299d4c8f3b84f5ca, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!95 &866107997
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5575048347978336650}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 124afd09e8d749b47a04eb21f02cd543, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5575048348223293859
 GameObject:
   m_ObjectHideFlags: 0
@@ -552,7 +588,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -132, y: -116.9}
-  m_SizeDelta: {x: 16, y: 44}
+  m_SizeDelta: {x: 20, y: 44}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!50 &5575048348650952026
 Rigidbody2D:
@@ -596,14 +632,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 2100000, guid: 2f1abdc87bdc7d04690f3baa6fea58fc, type: 2}
-  m_Color: {r: 0.9433962, g: 0.12014952, b: 0.12014952, a: 1}
+  m_Color: {r: 0.9811321, g: 0.9579922, b: 0.9579922, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Texture: {fileID: 2800000, guid: 536a0a8f6f8c4b747a6628e0ebe8007a, type: 3}
+  m_Texture: {fileID: 2800000, guid: 013e5c216f340f046a5651b37ce2d64a, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0

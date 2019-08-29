@@ -8,7 +8,8 @@ TagManager:
   - SpokenAlter
   - SpokenLiar
   - Liar
-  - SecondLiar
+  - NormalObject
+  - SpokenNormal
   layers:
   - Default
   - TransparentFX
