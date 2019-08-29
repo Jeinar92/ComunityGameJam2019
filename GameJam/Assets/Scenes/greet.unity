@@ -691,6 +691,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Liar
       objectReference: {fileID: 0}
+    - target: {fileID: 2818184859600449136, guid: 43c1156f8b4c2244296f0ed598c87656,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43c1156f8b4c2244296f0ed598c87656, type: 3}
 --- !u!1001 &3185959240309118040
@@ -1122,6 +1127,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.b
       value: 0.9579922
+      objectReference: {fileID: 0}
+    - target: {fileID: 5575048347978336653, guid: 592dea7d5e93d6f4abe073404c9ed7e4,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5575048346978663794, guid: 592dea7d5e93d6f4abe073404c9ed7e4,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5575048346978663794, guid: 592dea7d5e93d6f4abe073404c9ed7e4,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -401
+      objectReference: {fileID: 0}
+    - target: {fileID: 5575048348650952023, guid: 592dea7d5e93d6f4abe073404c9ed7e4,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5575048347700976943, guid: 592dea7d5e93d6f4abe073404c9ed7e4,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 592dea7d5e93d6f4abe073404c9ed7e4, type: 3}
