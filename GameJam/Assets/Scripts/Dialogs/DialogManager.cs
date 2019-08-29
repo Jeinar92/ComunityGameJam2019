@@ -6,34 +6,43 @@ using UnityEngine.UI;
 public class DialogManager : MonoBehaviour
 {
     [SerializeField] GameObject dialogPanel;                               // Import dialog box   
-    [SerializeField] GameObject liarButton;                                // Import Liar accept button
-    [SerializeField] GameObject acceptButton;                              // Import Alter accept button
-    [SerializeField] DataManager getData;                                  // Import dataManager
-    [SerializeField] CoinsCount coins;
+    [SerializeField] GameObject normalAcceptButton;                        // Import normal accept button
+    [SerializeField] GameObject liarAcceptButton;                          // Import Liar accept button
+    [SerializeField] GameObject alterAcceptButton;                         // Import Alter accept button
+    [SerializeField] GameObject secondLiarText;                            // Import 2nd Liar game object
+    [SerializeField] DataManager getData;                                  // Import dataManager script
+    [SerializeField] CoinsCount coins;                                     // Import cains script
 
     [SerializeField] int honestNumber = 0;                                 // Number of honest NPC spoken
     public bool open = false;                                              // Boolean to check whether dialog box is open
     public bool close = false;                                             // Boolean to check whether dialog box is close
     public bool openLiarButton = false;                                    // Boolean to check whether liar button is open
+    public bool openNormalButton = false;                                  // Boolean to check whether normal button is open
+    public bool openAlterButton = false;                                   // Boolean to check whether liar button is open
     public float id;                                                      
-    public bool talking;                                                    // Boolean to check whether we are speaking to new honest NPC
-    public bool liarSpoken = false;
-
-    public int liarvalue = 0;
+    public bool talking;                                                   //  Bolean to check wheter we are taling or not
+    public bool liarSpoken = false;                                        // Boolean to get the import from Coins Script check whether we are speaking to new honest NPC
+    public bool secondLiarTalking = false;                                 // Boolean to check if second Liar text is talking
+    public int liarvalue = 0;                                              // Int to export if liar was spoken
    
     void Update()
     {
         liarSpoken = coins.liarSpoken;
         open = getData.openPanel;
         openLiarButton = getData.openLiarButton;
+        openNormalButton = getData.openNormalButton;
+        openAlterButton = getData.openAlterButton;
 
-        if(liarSpoken == true)
+        if (liarSpoken == true)
         {
-            liarvalue--;
+            liarvalue = 0;
+            //secondLiarTalking = true;
+            liarSpoken = false;
+            secondLiarText.SetActive(true);
         }
+
         OpenPanel();
     }
-
 
     public void OpenPanel()
     {
@@ -43,22 +52,33 @@ public class DialogManager : MonoBehaviour
 
             if (dialogPanel != null)
             {
-                LiarButtonCheck();
+                ButtonActivator();
             }
         } 
         close = true;        
     }
 
-    private void LiarButtonCheck()
+    private void ButtonActivator()
     {
-        if (openLiarButton == true)
+        if (openLiarButton)
         {
-            acceptButton.SetActive(false);
-            liarButton.SetActive(true);
+            normalAcceptButton.SetActive(false);
+            alterAcceptButton.SetActive(false);
+            liarAcceptButton.SetActive(true);
             dialogPanel.SetActive(true);
         }
-        else
+        else if (openNormalButton)
         {
+            normalAcceptButton.SetActive(true);
+            alterAcceptButton.SetActive(false);
+            liarAcceptButton.SetActive(false);
+            dialogPanel.SetActive(true);
+        }
+        else if (alterAcceptButton)
+        {
+            normalAcceptButton.SetActive(false);
+            alterAcceptButton.SetActive(true);
+            liarAcceptButton.SetActive(false);
             dialogPanel.SetActive(true);
         }
     }
@@ -67,9 +87,12 @@ public class DialogManager : MonoBehaviour
     {
         if (close == true)
         {
-            liarButton.SetActive(false);
-            acceptButton.SetActive(true);
+
+            liarAcceptButton.SetActive(false);
+            alterAcceptButton.SetActive(false);
+            normalAcceptButton.SetActive(false);
             dialogPanel.SetActive(false);
+
             talking = false;
         }
         close = false;        
