@@ -23,6 +23,7 @@ public class CoinsCount : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI scoreText;                             // TMpro import for changing scoreText
     [SerializeField] DialogManager liarAcept;                               // Import script DialogManager to get info from it
+    [SerializeField] DataManager data;                                      // Import script DataManager to get info from it
 
     public bool liarSpoken;                                                 // Bool to export if liar was spoken after changing scoreText
 
@@ -34,6 +35,7 @@ public class CoinsCount : MonoBehaviour
     }
     private void Update()
     {
+        endLvl = data.goal;
         liarValue = liarAcept.liarvalue;
         if (added == true)
         {
@@ -43,16 +45,18 @@ public class CoinsCount : MonoBehaviour
         if (endLvl)
         {
             finalScore = (6000 - ((currentCoins * liarValue) + (alterAccepted)));
-            totalScore = (-finalScore).ToString();
+            totalScore = (finalScore).ToString();
             Debug.Log("Total Score : " + totalScore);
 
             PlayerPrefs.SetString("totalScore", totalScore);
             
-            if ((-finalScore) > highestScore)
+            if ((finalScore) > highestScore)
             {
-                highestScore = -finalScore;
+                highestScore = finalScore;
                 PlayerPrefs.SetInt("highestScoreLvl1", highestScore );
+                Debug.Log("New record : " + highestScore);
             }
+            
         }
 
 

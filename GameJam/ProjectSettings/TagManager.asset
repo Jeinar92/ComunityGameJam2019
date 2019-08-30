@@ -10,6 +10,7 @@ TagManager:
   - Liar
   - NormalObject
   - SpokenNormal
+  - Goal
   layers:
   - Default
   - TransparentFX

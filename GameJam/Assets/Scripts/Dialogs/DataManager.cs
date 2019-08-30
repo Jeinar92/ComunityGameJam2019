@@ -12,6 +12,7 @@ public class DataManager : MonoBehaviour
     public bool openLiarButton = false;                         //Bool to open liar accept button on collision
     public bool openNormalButton = false;                       //Bool to open normal accept button on collision
     public bool openAlterButton = false;                        //Bool to open alter accept button on collision
+    public bool goal = false;
 
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -44,11 +45,19 @@ public class DataManager : MonoBehaviour
             NormalIDGetter(collision);
             openPanel = true;
             openNormalButton = true;
-        }
-        else if (collision.gameObject.tag == "SpokenNormal")
+        }        
+        else if (collision.gameObject.tag == "Goal")
+        {
+            NormalIDGetter(collision);
+            openPanel = true;
+            openNormalButton = true;
+            goal = true;
+
+        }else if (collision.gameObject.tag == "SpokenNormal")
         {
             openPanel = false;
             openNormalButton = false;
+            goal = false;
         }
         
     }
