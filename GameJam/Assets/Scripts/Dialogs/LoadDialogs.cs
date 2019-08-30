@@ -9,7 +9,7 @@ public class LoadDialogs : MonoBehaviour
     [SerializeField] float liarTextID;                                       // float with id to get from liar on collision
     [SerializeField] float normalTextID;                                     // float with id to get from normal on collision
     [SerializeField] float actualIDText;                                     // float with id to store actual ID displaying
-
+    [SerializeField] int languaje;                                           // int to save languaje selected
     [SerializeField] TextMeshProUGUI textDisplay;                            // Variable to change or text on screen
     [SerializeField] DataManager getData;                                    // Importing DataManager script
         
@@ -50,10 +50,23 @@ public class LoadDialogs : MonoBehaviour
 
     void Start()
     {
-        TextAsset dialogData = Resources.Load<TextAsset>("dialogData");
-        string[] data = dialogData.text.Split(new char[] { '\n' });
+        languaje = PlayerPrefs.GetInt("languaje");
 
-        RowArrayFromData(data);
+        if (languaje == 0)
+        {
+            TextAsset dialogData = Resources.Load<TextAsset>("dialogData");
+            string[] data = dialogData.text.Split(new char[] { '\n' });
+
+            RowArrayFromData(data);
+        }
+        if (languaje == 1)
+        {
+            TextAsset dialogData = Resources.Load<TextAsset>("dialogDataES");
+            string[] data = dialogData.text.Split(new char[] { '\n' });
+
+            RowArrayFromData(data);
+        }
+        
         
     }
 
@@ -88,7 +101,6 @@ public class LoadDialogs : MonoBehaviour
                 int.TryParse(row[1], out dialog.Idlvl);
                 int.TryParse(row[2], out dialog.NPC);
                 dialog.text = row[3];
-                int.TryParse(row[4], out dialog.reward);
 
                 dialogArrays.Add(dialog);
             }

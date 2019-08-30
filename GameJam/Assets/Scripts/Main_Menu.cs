@@ -5,31 +5,32 @@ using UnityEngine.SceneManagement;
 
 public class Main_Menu : MonoBehaviour
 {
-    public void PlayButton()
-    {
-        SceneManager.LoadScene(4);
-    }
+   
 
     public void BackButton()
-    {
-        SceneManager.LoadScene(0);
-    }
-
-    public void ArchivesButton()
     {
         SceneManager.LoadScene(1);
     }
 
-    public void CreditButton()
+    public void ArchivesButton()
     {
         SceneManager.LoadScene(2);
     }
 
-    public void ScoresButton()
+    public void CreditButton()
     {
         SceneManager.LoadScene(3);
     }
 
-   
+    public void ScoresButton()
+    {
+        SceneManager.LoadScene(4);
+    }
+    public void PlayButton()
+    {
+        SceneManager.LoadScene(5);
+    }
+
+
 
 }
