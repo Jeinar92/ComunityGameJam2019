@@ -41,7 +41,13 @@ public class CoinsCount : MonoBehaviour
         {
             Sum();
         }
-        
+
+        FinalScore();
+        LiarValueCheck();
+    }
+
+    private void FinalScore()
+    {
         if (endLvl)
         {
             finalScore = (6000 - ((currentCoins * liarValue) + (alterAccepted)));
@@ -49,18 +55,15 @@ public class CoinsCount : MonoBehaviour
             Debug.Log("Total Score : " + totalScore);
 
             PlayerPrefs.SetString("totalScore", totalScore);
-            
+
             if ((finalScore) > highestScore)
             {
                 highestScore = finalScore;
-                PlayerPrefs.SetInt("highestScoreLvl1", highestScore );
+                PlayerPrefs.SetInt("highestScoreLvl1", highestScore);
                 Debug.Log("New record : " + highestScore);
             }
-            
+
         }
-
-
-        LiarValueCheck();
     }
 
     private void LiarValueCheck()
