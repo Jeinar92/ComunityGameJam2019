@@ -773,6 +773,7 @@ MonoBehaviour:
   openLiarButton: 0
   openNormalButton: 0
   openAlterButton: 0
+  goal: 0
 --- !u!50 &1431632905032387857
 Rigidbody2D:
   serializedVersion: 4
@@ -1248,7 +1249,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 861963112066109379}
   smoothSpeed: 10
-  offSet: {x: 0.1, y: 4, z: 0}
+  offSet: {x: 0.1, y: 3.71, z: 0}
 --- !u!1 &861963112940977429
 GameObject:
   m_ObjectHideFlags: 0
@@ -1406,6 +1407,7 @@ MonoBehaviour:
   liarTextID: 0
   normalTextID: 0
   actualIDText: 0
+  languaje: 0
   textDisplay: {fileID: 1620612334371391935}
   getData: {fileID: 4748587072722842247}
   openAlterButton: 0
@@ -1468,6 +1470,7 @@ MonoBehaviour:
   highestScore: 0
   scoreText: {fileID: 4968764193939571720}
   liarAcept: {fileID: 5180814655676190896}
+  data: {fileID: 4748587072722842247}
   liarSpoken: 0
 --- !u!1 &1184033081516923340
 GameObject:
@@ -1678,7 +1681,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 861963112066109379}
   smoothSpeed: 30
-  offSet: {x: 5.47, y: 4.35, z: 0}
+  offSet: {x: 5.38, y: 4.11, z: 0}
 --- !u!1 &2018863954448931492
 GameObject:
   m_ObjectHideFlags: 0
@@ -3580,7 +3583,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 861963112066109379}
   smoothSpeed: 30
-  offSet: {x: -4.05, y: 4.38, z: 0}
+  offSet: {x: -3.75, y: 4.16, z: 0}
 --- !u!114 &5180814655693209609
 MonoBehaviour:
   m_ObjectHideFlags: 0

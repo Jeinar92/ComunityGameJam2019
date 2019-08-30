@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class CoinsCount : MonoBehaviour
 {
@@ -63,6 +64,7 @@ public class CoinsCount : MonoBehaviour
                 Debug.Log("New record : " + highestScore);
             }
 
+            SceneManager.LoadScene(6);
         }
     }
 
