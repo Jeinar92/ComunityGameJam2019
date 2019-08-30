@@ -30,6 +30,7 @@ public class CoinsCount : MonoBehaviour
     private void Start()
     {
         scoreText.text = baseCoins.ToString();
+        highestScore = 0;
     }
     private void Update()
     {
@@ -46,7 +47,14 @@ public class CoinsCount : MonoBehaviour
             Debug.Log("Total Score : " + totalScore);
 
             PlayerPrefs.SetString("totalScore", totalScore);
+            
+            if ((-finalScore) > highestScore)
+            {
+                highestScore = -finalScore;
+                PlayerPrefs.SetInt("highestScoreLvl1", highestScore );
+            }
         }
+
 
         LiarValueCheck();
     }
