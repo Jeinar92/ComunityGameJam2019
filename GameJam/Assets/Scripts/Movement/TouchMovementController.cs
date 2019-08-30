@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
-public class ControlManager : MonoBehaviour
+public class TouchMovementController : MonoBehaviour
 {
     public CharacterController2D controller;
 
@@ -39,19 +39,20 @@ public class ControlManager : MonoBehaviour
         {
             runSpeed = 0f;
             jump = false;
-        } else if ((!isTalking) || (!isPaused))
+        }
+        else if ((!isTalking) || (!isPaused))
         {
             runSpeed = 40f;
-            if (Input.GetButtonDown("Jump"))
+            if (CrossPlatformInputManager.GetButtonDown("Jump"))
             {
                 jump = true;
             }
         }
-       
-        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+
+        horizontalMove = CrossPlatformInputManager.GetAxisRaw("Horizontal") * runSpeed;
 
 
-        
+
     }
 
     void FixedUpdate()
