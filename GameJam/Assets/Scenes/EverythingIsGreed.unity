@@ -597,7 +597,7 @@ PrefabInstance:
     - target: {fileID: 3185959241427808392, guid: 91040b788d5ad744cbcbe6efde44b52b,
         type: 3}
       propertyPath: m_Intensity
-      value: 0.7
+      value: 0.125
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91040b788d5ad744cbcbe6efde44b52b, type: 3}
@@ -1159,6 +1159,21 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 778862168}
+    - target: {fileID: 7355001257029520675, guid: 7c195a65dbbef194c9e114c058835e46,
+        type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7355001257029520675, guid: 7c195a65dbbef194c9e114c058835e46,
+        type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7355001257029520675, guid: 7c195a65dbbef194c9e114c058835e46,
+        type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c195a65dbbef194c9e114c058835e46, type: 3}
 --- !u!1001 &7466591672556245505
