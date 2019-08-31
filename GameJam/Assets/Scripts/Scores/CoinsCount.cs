@@ -14,8 +14,8 @@ public class CoinsCount : MonoBehaviour
 
     [SerializeField] bool added = false;                                    // Bool to control if an alter was acepted
     [SerializeField] bool endLvl = false;                                   // Bool to control if we reached the end of level
-    
 
+    [SerializeField] int liarValueES = 0;
     [SerializeField] int liarValue = 0;                                     // Its value is 1 if Liar is acepted and 0 if not or not spoken
     [SerializeField] int postLiarValue = 0;                                 // int to save liar value before it gets reset
 
@@ -26,7 +26,7 @@ public class CoinsCount : MonoBehaviour
     [SerializeField] TextMeshProUGUI scoreText;                             // TMpro import for changing scoreText
     [SerializeField] DialogManager liarAcept;                               // Import script DialogManager to get info from it
     [SerializeField] DataManager data;                                      // Import script DataManager to get info from it
-
+    [SerializeField] DialogManagerES liarAceptES;
     public bool liarSpoken;                                                 // Bool to export if liar was spoken after changing scoreText
 
 
@@ -38,7 +38,10 @@ public class CoinsCount : MonoBehaviour
     private void Update()
     {
         endLvl = data.goal;
-        liarValue = liarAcept.liarvalue;
+        
+            liarValue = liarAcept.liarvalue;
+            liarValueES = liarAceptES.liarvalue;
+        
         if (added == true)
         {
             Sum();
@@ -75,7 +78,7 @@ public class CoinsCount : MonoBehaviour
 
     private void LiarValueCheck()
     {
-        if (liarValue == 1)
+        if ((liarValue == 1) || (liarValueES == 1))
         {
             currentCoins = 6 - alterAccepted;
             scoreText.text = currentCoins.ToString();

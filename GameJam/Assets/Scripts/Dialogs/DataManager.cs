@@ -23,13 +23,12 @@ public class DataManager : MonoBehaviour
             openPanel = true;
             openAlterButton = true;
             openDeclineButton = true;
-
-
         }
         else if (collision.gameObject.tag == "SpokenAlter")
         {
             openPanel = false;
             openAlterButton = false;
+            openDeclineButton = false;
         }
         else if (collision.gameObject.tag == "Liar")
         {
@@ -42,6 +41,7 @@ public class DataManager : MonoBehaviour
         {
             openPanel = false;
             openLiarButton = false;
+            openDeclineButton = false;
 
         }
         else if (collision.gameObject.tag == "NormalObject")
