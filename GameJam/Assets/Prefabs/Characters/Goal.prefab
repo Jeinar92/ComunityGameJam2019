@@ -118,14 +118,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 2100000, guid: 2f1abdc87bdc7d04690f3baa6fea58fc, type: 2}
-  m_Color: {r: 0.098122105, g: 0.990566, b: 0.19889776, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Texture: {fileID: 2800000, guid: eb52e540a7f77de4d8336950c8f598a8, type: 3}
+  m_Texture: {fileID: 2800000, guid: 0e85627d846225e48b0cc1fd0945487a, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0

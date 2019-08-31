@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 113121935}
   - component: {fileID: 113121934}
   - component: {fileID: 113121933}
+  - component: {fileID: 113121936}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -203,6 +204,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &113121936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113121932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f9b4c4197e4ea6499c8bc6f1129818e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EN: {fileID: 1929362833}
+  ES: {fileID: 850161945}
 --- !u!1001 &850161944
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -214,6 +229,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ES_Score Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 5297940386333930554, guid: d48932692697926448c40f98a9b922b6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5297940386333930550, guid: d48932692697926448c40f98a9b922b6,
         type: 3}
@@ -493,6 +513,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EN_Score Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 5297940386333930554, guid: d48932692697926448c40f98a9b922b6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5297940386333930550, guid: d48932692697926448c40f98a9b922b6,
         type: 3}

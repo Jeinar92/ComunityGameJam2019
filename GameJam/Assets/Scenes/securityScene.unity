@@ -389,6 +389,11 @@ PrefabInstance:
       propertyPath: secondLiarText
       value: 
       objectReference: {fileID: 954433995}
+    - target: {fileID: 7729042654738980220, guid: ad0ef2893bb2d714997de097f3415828,
+        type: 3}
+      propertyPath: secondLiarText
+      value: 
+      objectReference: {fileID: 954433995}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad0ef2893bb2d714997de097f3415828, type: 3}
 --- !u!1001 &1532434214494075150
@@ -508,7 +513,12 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 2065438281, guid: 43c1156f8b4c2244296f0ed598c87656, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 70752983860650d4fb4775c53f7146d4, type: 2}
+    m_RemovedComponents:
+    - {fileID: 2756430484854384880, guid: 43c1156f8b4c2244296f0ed598c87656, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 43c1156f8b4c2244296f0ed598c87656, type: 3}
 --- !u!1001 &3185959240309118040
 PrefabInstance:
@@ -580,7 +590,7 @@ PrefabInstance:
     - target: {fileID: 3185959241427808392, guid: 91040b788d5ad744cbcbe6efde44b52b,
         type: 3}
       propertyPath: m_Intensity
-      value: 0.7
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91040b788d5ad744cbcbe6efde44b52b, type: 3}
@@ -820,11 +830,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 4505439274416094198, guid: 5a92c5dd5377995468a256f6a4ceb7ac,
-        type: 3}
-      propertyPath: m_Name
-      value: monolith
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a92c5dd5377995468a256f6a4ceb7ac, type: 3}
 --- !u!1001 &5575048348179094193
@@ -944,6 +949,14 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 866107998, guid: 592dea7d5e93d6f4abe073404c9ed7e4, type: 3}
+      propertyPath: m_Animation
+      value: 
+      objectReference: {fileID: 7400000, guid: 24ac49143fc0df6489a0fb18795c5176, type: 2}
+    - target: {fileID: 866107997, guid: 592dea7d5e93d6f4abe073404c9ed7e4, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 70752983860650d4fb4775c53f7146d4, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 592dea7d5e93d6f4abe073404c9ed7e4, type: 3}
 --- !u!1001 &6350484618161871065
@@ -1137,6 +1150,25 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 778862168}
+    - target: {fileID: 7355001257029520675, guid: 7c195a65dbbef194c9e114c058835e46,
+        type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7355001257029520675, guid: 7c195a65dbbef194c9e114c058835e46,
+        type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7355001257029520675, guid: 7c195a65dbbef194c9e114c058835e46,
+        type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 264903194, guid: 7c195a65dbbef194c9e114c058835e46, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9de7d70499d2e094985dc0b9c73295fd, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c195a65dbbef194c9e114c058835e46, type: 3}
 --- !u!1001 &7466591672556245505

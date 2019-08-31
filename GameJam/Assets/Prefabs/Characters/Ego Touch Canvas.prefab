@@ -1027,16 +1027,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 6519208729649266261}
+  animator: {fileID: 0}
   rigid: {fileID: 1431632905032387857}
   runSpeed: 40
   basecoinCount: 6
   actualCoinCount: 0
   talk: {fileID: 5180814655676190896}
+  talkES: {fileID: 7729042654738980220}
   pause: {fileID: 5180814655693209609}
   talkingControl: 0
   close: 0
   open: 0
   isTalking: 0
+  isTalkingES: 0
   isPaused: 0
 --- !u!1 &861963112298284751
 GameObject:
@@ -1056,7 +1059,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &861963112298284750
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1567,7 +1570,7 @@ MonoBehaviour:
   liarTextID: 0
   normalTextID: 0
   actualIDText: 0
-  languaje: 0
+  language: 0
   textDisplay: {fileID: 1620612334371391935}
   getData: {fileID: 4748587072722842247}
   openAlterButton: 0
@@ -1588,6 +1591,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogPanel: {fileID: 861963112830890136}
+  UI_EN: {fileID: 7643964623288192893}
   normalAcceptButton: {fileID: 5180814654847717941}
   liarAcceptButton: {fileID: 2307722860359891334}
   alterAcceptButton: {fileID: 861963112298284751}
@@ -1627,6 +1631,7 @@ MonoBehaviour:
   totalAlterAccepted: 0
   added: 0
   endLvl: 0
+  liarValueES: 0
   liarValue: 1
   postLiarValue: 0
   finalScore: 0
@@ -1635,6 +1640,7 @@ MonoBehaviour:
   scoreText: {fileID: 4968764193939571720}
   liarAcept: {fileID: 5180814655676190896}
   data: {fileID: 4748587072722842247}
+  liarAceptES: {fileID: 7729042654738980220}
   liarSpoken: 0
 --- !u!114 &7729042654738980220
 MonoBehaviour:
@@ -1649,6 +1655,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogPanel: {fileID: 861963112830890136}
+  UI_ES: {fileID: 5654534980049278897}
   normalAcceptButton: {fileID: 1469429523083450911}
   liarAcceptButton: {fileID: 4231822427268149176}
   alterAcceptButton: {fileID: 5480830213896722059}
@@ -2264,7 +2271,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5180814655676190896}
+      - m_Target: {fileID: 7729042654738980220}
         m_MethodName: ClosePanel
         m_Mode: 1
         m_Arguments:
@@ -2274,7 +2281,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 1
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &1551281562936420866
@@ -3086,7 +3093,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5180814655676190896}
+      - m_Target: {fileID: 7729042654738980220}
         m_MethodName: AcceptLiarButton
         m_Mode: 1
         m_Arguments:
@@ -3672,9 +3679,9 @@ Light:
   m_Enabled: 1
   serializedVersion: 9
   m_Type: 2
-  m_Color: {r: 0.7313623, g: 0.51023495, b: 0.9245283, a: 1}
+  m_Color: {r: 0.9150943, g: 0.9150943, b: 0.9150943, a: 1}
   m_Intensity: 15
-  m_Range: 2.1957035
+  m_Range: 2.2370584
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -4490,7 +4497,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5180814655676190896}
+      - m_Target: {fileID: 7729042654738980220}
         m_MethodName: ClosePanel
         m_Mode: 1
         m_Arguments:
@@ -5321,7 +5328,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8857348828738106455
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5465,7 +5472,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5180814655676190896}
+      - m_Target: {fileID: 7729042654738980220}
         m_MethodName: ClosePanel
         m_Mode: 1
         m_Arguments:
