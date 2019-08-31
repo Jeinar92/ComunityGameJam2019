@@ -683,6 +683,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: BackButton
       objectReference: {fileID: 0}
+    - target: {fileID: 5297940385802439936, guid: d48932692697926448c40f98a9b922b6,
+        type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 0f73d74fd7c92374f9c395eee14d3ce4, type: 3}
+    - target: {fileID: 5297940385820841147, guid: d48932692697926448c40f98a9b922b6,
+        type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 5b88ba22846a683449eb9fc9820fad91, type: 3}
+    - target: {fileID: 5297940386085879744, guid: d48932692697926448c40f98a9b922b6,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f8f80b995d4ff6b4b9805019fd92407d,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d48932692697926448c40f98a9b922b6, type: 3}
 --- !u!1001 &8233880769862126715
@@ -701,6 +717,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3271518922089876914, guid: cd571aa1f6230a3469fd6f2930e5e537,
+        type: 3}
+      propertyPath: m_text
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3271518922089876914, guid: cd571aa1f6230a3469fd6f2930e5e537,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1964364963425610537, guid: cd571aa1f6230a3469fd6f2930e5e537,
         type: 3}
@@ -851,16 +877,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Level
-      objectReference: {fileID: 0}
-    - target: {fileID: 3271518922089876914, guid: cd571aa1f6230a3469fd6f2930e5e537,
-        type: 3}
-      propertyPath: m_text
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 3271518922089876914, guid: cd571aa1f6230a3469fd6f2930e5e537,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3666674684830487960, guid: cd571aa1f6230a3469fd6f2930e5e537,
         type: 3}
