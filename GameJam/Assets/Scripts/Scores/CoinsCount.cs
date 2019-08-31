@@ -28,7 +28,7 @@ public class CoinsCount : MonoBehaviour
     [SerializeField] DialogManager liarAcept;                               // Import script DialogManager to get info from it
     [SerializeField] DataManager data;                                      // Import script DataManager to get info from it
     [SerializeField] DialogManagerES liarAceptES;
-    public bool liarSpoken;                                                 // Bool to export if liar was spoken after changing scoreText
+    public bool liarSpoken = false;                                                 // Bool to export if liar was spoken after changing scoreText
 
 
     private void Start()
@@ -60,17 +60,16 @@ public class CoinsCount : MonoBehaviour
             if (currentCoins == 6)
             {
                 totalScore = 6006;
-            }else
+            }else if (((liarValue == 0) || (liarValueES == 0)) && (liarSpoken == false)){
+
+                totalScore = 0;
+            }
+            else
             {
                 maxScore = 6006;
                 totalScore = maxScore - currentCoins;
 
             }
-            
-
-           
-
-            Debug.Log(totalScore);
 
             string totalScoreText = totalScore.ToString();
             Debug.Log("Total Score : " + totalScore);
