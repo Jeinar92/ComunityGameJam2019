@@ -6,6 +6,8 @@ using UnityStandardAssets.CrossPlatformInput;
 public class TouchMovementController : MonoBehaviour
 {
     public CharacterController2D controller;
+    //esto es para conectar el componente animator al script
+    public Animator animator;
 
 
     [SerializeField] Rigidbody2D rigid;
@@ -32,6 +34,9 @@ public class TouchMovementController : MonoBehaviour
 
     void Update()
     {
+        //esto es para que detecte de forma positiva o negativa el movimiento
+        animator.setfloat("Speed", Mathf.Abs(horizontalMove));
+
         isTalking = talk.talking;
         isPaused = pause.paused;
 
