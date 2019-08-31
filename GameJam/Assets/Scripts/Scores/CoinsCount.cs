@@ -18,10 +18,11 @@ public class CoinsCount : MonoBehaviour
     [SerializeField] int liarValueES = 0;
     [SerializeField] int liarValue = 0;                                     // Its value is 1 if Liar is acepted and 0 if not or not spoken
     [SerializeField] int postLiarValue = 0;                                 // int to save liar value before it gets reset
-
+    [SerializeField] int liarScore;
     [SerializeField] int finalScore;                                       // int where we save formula of final score of the level
     [SerializeField] int totalScore;                                    // negative finalscore saved on a string
     [SerializeField] int highestScore;                                     // int where we save the highest Score obtained                               
+    [SerializeField] int maxScore;
 
     [SerializeField] TextMeshProUGUI scoreText;                             // TMpro import for changing scoreText
     [SerializeField] DialogManager liarAcept;                               // Import script DialogManager to get info from it
@@ -57,17 +58,20 @@ public class CoinsCount : MonoBehaviour
         {
             totalAlterAccepted = alterAccepted + afterLiar_AlterAccepted;
 
-            finalScore = (10000 - (totalAlterAccepted * 1000) - baseCoins);
-            Debug.Log(finalScore);
-            totalScore = (10000 + currentCoins) - finalScore;
+            maxScore = (totalAlterAccepted * 1000) + baseCoins;
+            liarScore = -(totalAlterAccepted * 1000) - (baseCoins * totalAlterAccepted);
+            totalScore = maxScore - liarScore;
+
+            Debug.Log(totalScore);
+
             string totalScoreText = totalScore.ToString();
             Debug.Log("Total Score : " + totalScore);
 
             PlayerPrefs.SetString("totalScore", totalScoreText);
 
-            if ((finalScore) > highestScore)
+            if ((totalScore) > highestScore)
             {
-                highestScore = finalScore;
+                highestScore = totalScore;
                 PlayerPrefs.SetInt("highestScoreLvl1", highestScore);
                 Debug.Log("New record : " + highestScore);
             }

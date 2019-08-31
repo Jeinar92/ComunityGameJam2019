@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class MenuLanguage : MonoBehaviour
 {
-    [SerializeField] GameObject menuEN;
-    [SerializeField] GameObject menuES;
+    [SerializeField] GameObject EN;
+    [SerializeField] GameObject ES;
     private int language;
 
     void Start()
@@ -13,13 +13,13 @@ public class MenuLanguage : MonoBehaviour
         language = PlayerPrefs.GetInt("language");
         if (language == 0)
         {
-            menuEN.SetActive(true);
-            menuES.SetActive(false);
+            EN.SetActive(true);
+            ES.SetActive(false);
         }
         if (language == 1)
         {
-            menuEN.SetActive(false);
-            menuES.SetActive(true);
+            EN.SetActive(false);
+            ES.SetActive(true);
         }
     }
 

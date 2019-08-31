@@ -216,8 +216,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f9b4c4197e4ea6499c8bc6f1129818e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuEN: {fileID: 3392650882931836506}
-  menuES: {fileID: 904253639}
+  EN: {fileID: 3392650882931836506}
+  ES: {fileID: 904253639}
 --- !u!1001 &904253638
 PrefabInstance:
   m_ObjectHideFlags: 0
