@@ -5,17 +5,18 @@ using TMPro;
 
 public class Level1Score : MonoBehaviour
 {
+    [SerializeField] Score_EverithingIsGreed everithingIsGreed;
+    public int lvlCoins;
     public int lvlScore;
-    public int lvlRecord;
+    [SerializeField] TextMeshProUGUI lvlCoinsText;
     [SerializeField] TextMeshProUGUI lvlScoreText;
-    [SerializeField] TextMeshProUGUI lvlRecordText;
 
     void Update()
     {
-        lvlScore = PlayerPrefs.GetInt("totalScore");
-        lvlRecord = PlayerPrefs.GetInt("highestScoreLvl1");
+        lvlCoins = everithingIsGreed.currentCoins;
+        lvlScore = everithingIsGreed.totalScore;
 
-        lvlScoreText.text = "Total Lvl Score : " + lvlScore.ToString();
-        lvlRecordText.text = "Level Record : " + lvlRecord.ToString();
+        lvlCoinsText.text = lvlCoins.ToString();
+        lvlScoreText.text = lvlScore.ToString();
     }
 }

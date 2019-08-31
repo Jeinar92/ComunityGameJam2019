@@ -57,10 +57,10 @@ public class CoinsCount : MonoBehaviour
         if (endLvl)
         {
             totalAlterAccepted = alterAccepted + afterLiar_AlterAccepted;
-            if (currentCoins == 6)
+            if ((currentCoins == 6) && (liarSpoken == true))
             {
                 totalScore = 6006;
-            }else if (((liarValue == 0) || (liarValueES == 0)) && (liarSpoken == false)){
+            }else if (currentCoins == 0){
 
                 totalScore = 0;
             }
@@ -71,10 +71,10 @@ public class CoinsCount : MonoBehaviour
 
             }
 
-            string totalScoreText = totalScore.ToString();
+
             Debug.Log("Total Score : " + totalScore);
 
-            PlayerPrefs.SetString("totalScore", totalScoreText);
+            PlayerPrefs.SetInt("totalScore", totalScore);
 
             if ((totalScore) > highestScore)
             {
@@ -83,6 +83,7 @@ public class CoinsCount : MonoBehaviour
                 Debug.Log("New record : " + highestScore);
             }
 
+            PlayerPrefs.SetInt("currentCoins", currentCoins);
             SceneManager.LoadScene(6);
         }
     }
