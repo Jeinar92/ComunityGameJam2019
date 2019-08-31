@@ -216,8 +216,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f9b4c4197e4ea6499c8bc6f1129818e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EN: {fileID: 1929362833}
-  ES: {fileID: 850161945}
+  EN: {fileID: 5297940387574601088}
+  ES: {fileID: 850161947}
 --- !u!1001 &850161944
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -233,7 +233,7 @@ PrefabInstance:
     - target: {fileID: 5297940386333930554, guid: d48932692697926448c40f98a9b922b6,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5297940386333930550, guid: d48932692697926448c40f98a9b922b6,
         type: 3}
@@ -366,6 +366,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 0bc6ac885352a3a45a810ec62e390f84,
         type: 3}
+    - target: {fileID: 5297940386333930551, guid: d48932692697926448c40f98a9b922b6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d48932692697926448c40f98a9b922b6, type: 3}
 --- !u!1 &850161945 stripped
@@ -386,6 +391,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab377ca8a36655b428d43f8874eb6a34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!223 &850161947 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 5297940386333930551, guid: d48932692697926448c40f98a9b922b6,
+    type: 3}
+  m_PrefabInstance: {fileID: 850161944}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &857841406 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3271518922089876914, guid: cd571aa1f6230a3469fd6f2930e5e537,
@@ -517,7 +528,7 @@ PrefabInstance:
     - target: {fileID: 5297940386333930554, guid: d48932692697926448c40f98a9b922b6,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5297940386333930550, guid: d48932692697926448c40f98a9b922b6,
         type: 3}
@@ -650,8 +661,19 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: f8f80b995d4ff6b4b9805019fd92407d,
         type: 3}
+    - target: {fileID: 5297940386333930551, guid: d48932692697926448c40f98a9b922b6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d48932692697926448c40f98a9b922b6, type: 3}
+--- !u!223 &5297940387574601088 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 5297940386333930551, guid: d48932692697926448c40f98a9b922b6,
+    type: 3}
+  m_PrefabInstance: {fileID: 5297940387574601087}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8233880769862126715
 PrefabInstance:
   m_ObjectHideFlags: 0

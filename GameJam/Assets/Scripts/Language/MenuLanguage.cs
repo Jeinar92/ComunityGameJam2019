@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MenuLanguage : MonoBehaviour
 {
-    [SerializeField] GameObject EN;
-    [SerializeField] GameObject ES;
+    [SerializeField] Canvas EN;
+    [SerializeField] Canvas ES;
     private int language;
 
     void Start()
@@ -13,13 +14,13 @@ public class MenuLanguage : MonoBehaviour
         language = PlayerPrefs.GetInt("language");
         if (language == 0)
         {
-            EN.SetActive(true);
-            ES.SetActive(false);
+            EN.enabled = true;
+            ES.enabled = false;
         }
         if (language == 1)
         {
-            EN.SetActive(false);
-            ES.SetActive(true);
+            EN.enabled = false;
+            ES.enabled = true;
         }
     }
 
