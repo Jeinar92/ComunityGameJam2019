@@ -13,7 +13,9 @@ public class TouchMovementController : MonoBehaviour
     [SerializeField] int basecoinCount = 6;
     [SerializeField] int actualCoinCount;
     [SerializeField] DialogManager talk;
+    [SerializeField] DialogManagerES talkES;
     [SerializeField] Pause pause;
+
 
 
     private float horizontalMove = 0f;
@@ -22,6 +24,7 @@ public class TouchMovementController : MonoBehaviour
     public bool close = false;
     public bool open = false;
     public bool isTalking;
+    public bool isTalkingES;
     public bool isPaused;
 
 
@@ -32,15 +35,17 @@ public class TouchMovementController : MonoBehaviour
 
     void Update()
     {
+        
         isTalking = talk.talking;
+        isTalkingES = talkES.talking;      
         isPaused = pause.paused;
 
-        if ((isTalking) || (isPaused))
+        if ((isTalking) || (isPaused) || (isTalkingES))
         {
             runSpeed = 0f;
             jump = false;
         }
-        else if ((!isTalking) || (!isPaused))
+        else if ((!isTalking) || (!isPaused) || (!isTalkingES))
         {
             runSpeed = 40f;
             if (CrossPlatformInputManager.GetButtonDown("Jump"))

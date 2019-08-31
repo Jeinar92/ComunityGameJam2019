@@ -1624,12 +1624,13 @@ MonoBehaviour:
   afterLiar_AlterAccepted: 0
   baseCoins: 6
   currentCoins: 0
+  totalAlterAccepted: 0
   added: 0
   endLvl: 0
   liarValue: 1
   postLiarValue: 0
   finalScore: 0
-  totalScore: 
+  totalScore: 0
   highestScore: 0
   scoreText: {fileID: 4968764193939571720}
   liarAcept: {fileID: 5180814655676190896}
@@ -1663,7 +1664,6 @@ MonoBehaviour:
   openNormalButton: 0
   openAlterButton: 0
   openDeclineButton: 0
-  id: 0
   talking: 0
   liarSpoken: 0
   secondLiarTalking: 0
@@ -1694,8 +1694,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17f1c92705fff0745be3d6454d52de1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseEN: {fileID: 0}
-  pauseES: {fileID: 0}
+  pauseEN: {fileID: 8974076309486666094}
+  pauseES: {fileID: 4774367303937607613}
 --- !u!1 &905826062852576205
 GameObject:
   m_ObjectHideFlags: 0

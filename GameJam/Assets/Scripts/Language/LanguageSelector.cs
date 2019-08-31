@@ -8,7 +8,7 @@ public class LanguageSelector : MonoBehaviour
 
     private void Start()
     {
-        PlayerPrefs.DeleteKey("languaje");
+        PlayerPrefs.DeleteKey("language");
     }
 
     public void EnglishButtonPressed()
@@ -18,7 +18,7 @@ public class LanguageSelector : MonoBehaviour
     }
     public void SpanishButtonPressed()
     {
-        language++;
+        language = 1;
         PlayerPrefs.SetInt("language", language);
     }
 

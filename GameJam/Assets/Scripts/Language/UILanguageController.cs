@@ -19,12 +19,12 @@ public class UILanguageController : MonoBehaviour
         {
             dialogManagerEN.enabled = true;
             dialogManagerES.enabled = false;
+
         }
         if (language == 1)
         {
             dialogManagerEN.enabled = false;
             dialogManagerES.enabled = true;
-
         }
     }
 

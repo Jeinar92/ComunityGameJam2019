@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class DialogManager : MonoBehaviour
 {
     [SerializeField] GameObject dialogPanel;                               // Import dialog box   
+    [SerializeField] GameObject UI_EN;
     [SerializeField] GameObject normalAcceptButton;                        // Import normal accept button
     [SerializeField] GameObject liarAcceptButton;                          // Import Liar accept button
     [SerializeField] GameObject alterAcceptButton;                         // Import Alter accept button
@@ -44,7 +45,6 @@ public class DialogManager : MonoBehaviour
         if (liarSpoken == true)
         {
             liarvalue = 0;
-            //secondLiarTalking = true;
             liarSpoken = false;
             secondLiarText.SetActive(true);
         }
@@ -75,6 +75,7 @@ public class DialogManager : MonoBehaviour
             alterAcceptButton.SetActive(false);
             liarAcceptButton.SetActive(true);
             dialogPanel.SetActive(true);
+            UI_EN.SetActive(true);
         }
         else if (openNormalButton)
         {
@@ -83,6 +84,7 @@ public class DialogManager : MonoBehaviour
             alterAcceptButton.SetActive(false);
             liarAcceptButton.SetActive(false);
             dialogPanel.SetActive(true);
+            UI_EN.SetActive(true);
         }
         else if (alterAcceptButton)
         {
@@ -91,6 +93,7 @@ public class DialogManager : MonoBehaviour
             alterAcceptButton.SetActive(true);
             liarAcceptButton.SetActive(false);
             dialogPanel.SetActive(true);
+            UI_EN.SetActive(true);
         }
     }
 
@@ -98,11 +101,12 @@ public class DialogManager : MonoBehaviour
     {
         if (close == true)
         {
-
+            declineButton.SetActive(true);
             liarAcceptButton.SetActive(false);
             alterAcceptButton.SetActive(false);
             normalAcceptButton.SetActive(false);
             dialogPanel.SetActive(false);
+            UI_EN.SetActive(false);
 
             talking = false;
         }
