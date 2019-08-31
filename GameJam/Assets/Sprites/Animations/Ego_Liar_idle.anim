@@ -8,7 +8,7 @@ AnimationClip:
   m_PrefabAsset: {fileID: 0}
   m_Name: Ego_Liar_idle
   serializedVersion: 6
-  m_Legacy: 0
+  m_Legacy: 1
   m_Compressed: 0
   m_UseHighQualityCurve: 1
   m_RotationCurves: []
@@ -47,21 +47,8 @@ AnimationClip:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
   m_ClipBindingConstant:
-    genericBindings:
-    - serializedVersion: 2
-      path: 0
-      attribute: 0
-      script: {fileID: 0}
-      typeID: 212
-      customType: 23
-      isPPtrCurve: 1
-    pptrCurveMapping:
-    - {fileID: -2349530750556119654, guid: 4b35bc4d74c3d5b4bbe5fb3a234b79e6, type: 3}
-    - {fileID: 929238953242114326, guid: 4b35bc4d74c3d5b4bbe5fb3a234b79e6, type: 3}
-    - {fileID: -492597599407282180, guid: 4b35bc4d74c3d5b4bbe5fb3a234b79e6, type: 3}
-    - {fileID: -7897511647010802827, guid: 4b35bc4d74c3d5b4bbe5fb3a234b79e6, type: 3}
-    - {fileID: 6291562704632268971, guid: 4b35bc4d74c3d5b4bbe5fb3a234b79e6, type: 3}
-    - {fileID: -4222992464199093307, guid: 4b35bc4d74c3d5b4bbe5fb3a234b79e6, type: 3}
+    genericBindings: []
+    pptrCurveMapping: []
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
