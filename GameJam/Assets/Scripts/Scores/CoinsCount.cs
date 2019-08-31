@@ -57,10 +57,18 @@ public class CoinsCount : MonoBehaviour
         if (endLvl)
         {
             totalAlterAccepted = alterAccepted + afterLiar_AlterAccepted;
+            if (currentCoins == 6)
+            {
+                totalScore = 6006;
+            }else
+            {
+                maxScore = 6006;
+                totalScore = maxScore - currentCoins;
 
-            maxScore = (totalAlterAccepted * 1000) + baseCoins;
-            liarScore = -(totalAlterAccepted * 1000) - (baseCoins * totalAlterAccepted);
-            totalScore = maxScore - liarScore;
+            }
+            
+
+           
 
             Debug.Log(totalScore);
 
