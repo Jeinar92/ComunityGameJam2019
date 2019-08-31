@@ -59,13 +59,10 @@ public class CoinsCount : MonoBehaviour
             totalAlterAccepted = alterAccepted + afterLiar_AlterAccepted;
             if (currentCoins == 6)
             {
-                if (postLiarValue == 1)
-                {
-                    totalScore = 6006;
-                } else
-                {
-                    totalScore = 0;
-                }
+                totalScore = 6006;
+            }else if (((liarValue == 0) || (liarValueES == 0)) && (liarSpoken == false)){
+
+                totalScore = 0;
             }
             else
             {
@@ -73,9 +70,6 @@ public class CoinsCount : MonoBehaviour
                 totalScore = maxScore - currentCoins;
 
             }
-            
-
-            Debug.Log(totalScore);
 
             string totalScoreText = totalScore.ToString();
             Debug.Log("Total Score : " + totalScore);
