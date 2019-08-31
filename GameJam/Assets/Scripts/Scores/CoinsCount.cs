@@ -10,6 +10,7 @@ public class CoinsCount : MonoBehaviour
     [SerializeField] int afterLiar_AlterAccepted = 0;                       //Current number of Alter acepted
     [SerializeField] int baseCoins = 6;                                     //Coins given at start
     [SerializeField] int currentCoins;                                      // Coins updated in base to base coins and number of alter acepted
+    [SerializeField] int totalAlterAccepted;
 
     [SerializeField] bool added = false;                                    // Bool to control if an alter was acepted
     [SerializeField] bool endLvl = false;                                   // Bool to control if we reached the end of level
@@ -19,7 +20,7 @@ public class CoinsCount : MonoBehaviour
     [SerializeField] int postLiarValue = 0;                                 // int to save liar value before it gets reset
 
     [SerializeField] int finalScore;                                       // int where we save formula of final score of the level
-    [SerializeField] string totalScore;                                    // negative finalscore saved on a string
+    [SerializeField] int totalScore;                                    // negative finalscore saved on a string
     [SerializeField] int highestScore;                                     // int where we save the highest Score obtained                               
 
     [SerializeField] TextMeshProUGUI scoreText;                             // TMpro import for changing scoreText
@@ -51,11 +52,15 @@ public class CoinsCount : MonoBehaviour
     {
         if (endLvl)
         {
-            finalScore = (6000 - ((currentCoins * liarValue) + (alterAccepted)));
-            totalScore = (finalScore).ToString();
+            totalAlterAccepted = alterAccepted + afterLiar_AlterAccepted;
+
+            finalScore = (10000 - (totalAlterAccepted * 1000) - baseCoins);
+            Debug.Log(finalScore);
+            totalScore = (10000 + currentCoins) - finalScore;
+            string totalScoreText = totalScore.ToString();
             Debug.Log("Total Score : " + totalScore);
 
-            PlayerPrefs.SetString("totalScore", totalScore);
+            PlayerPrefs.SetString("totalScore", totalScoreText);
 
             if ((finalScore) > highestScore)
             {

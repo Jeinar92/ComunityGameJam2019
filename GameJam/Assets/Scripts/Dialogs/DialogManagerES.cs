@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DialogManager : MonoBehaviour
+public class DialogManagerES : MonoBehaviour
 {
     [SerializeField] GameObject dialogPanel;                               // Import dialog box   
     [SerializeField] GameObject normalAcceptButton;                        // Import normal accept button
@@ -22,17 +22,17 @@ public class DialogManager : MonoBehaviour
     public bool openNormalButton = false;                                  // Boolean to check whether normal button is open
     public bool openAlterButton = false;                                   // Boolean to check whether liar button is open
     public bool openDeclineButton = false;
-    public float id;                                                      
+    public float id;
     public bool talking;                                                   //  Bolean to check wheter we are taling or not
     public bool liarSpoken = false;                                        // Boolean to get the import from Coins Script check whether we are speaking to new honest NPC
     public bool secondLiarTalking = false;                                 // Boolean to check if second Liar text is talking
     public int liarvalue = 0;                                              // Int to export if liar was spoken
 
-   
 
     void Update()
     {
-        Debug.Log(language);        
+        Debug.Log(language);
+
 
         liarSpoken = coins.liarSpoken;
         open = getData.openPanel;
@@ -50,7 +50,8 @@ public class DialogManager : MonoBehaviour
         }
 
         OpenPanel();
-    }   
+    }
+
 
     public void OpenPanel()
     {
@@ -62,8 +63,8 @@ public class DialogManager : MonoBehaviour
             {
                 ButtonActivator();
             }
-        } 
-        close = true;        
+        }
+        close = true;
     }
 
     private void ButtonActivator()
@@ -106,12 +107,12 @@ public class DialogManager : MonoBehaviour
 
             talking = false;
         }
-        close = false;        
+        close = false;
     }
 
     public void AcceptLiarButton()
     {
-        liarvalue++;   
+        liarvalue++;
         ClosePanel();
     }
 
