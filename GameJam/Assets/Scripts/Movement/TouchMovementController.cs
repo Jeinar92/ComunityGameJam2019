@@ -37,13 +37,7 @@ public class TouchMovementController : MonoBehaviour
 
     void Update()
     {
-<<<<<<< HEAD
-        
-=======
-        //esto es para que detecte de forma positiva o negativa el movimiento
-        animator.setfloat("Speed", Mathf.Abs(horizontalMove));
 
->>>>>>> cda6a98a3cc786d2675096069a8a97c853aed4cc
         isTalking = talk.talking;
         isTalkingES = talkES.talking;      
         isPaused = pause.paused;
