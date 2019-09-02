@@ -770,20 +770,17 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 861963112066109379}
-  - component: {fileID: 6519208729649266261}
-  - component: {fileID: 4748587072722842247}
   - component: {fileID: 1431632905032387857}
   - component: {fileID: 861963112066109377}
   - component: {fileID: 861963112066109378}
   - component: {fileID: 5180814654518522809}
-  - component: {fileID: 6755170607459803962}
   m_Layer: 5
   m_Name: Ego Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &861963112066109379
 RectTransform:
   m_ObjectHideFlags: 0
@@ -805,52 +802,6 @@ RectTransform:
   m_AnchoredPosition: {x: -256.6, y: -220.9}
   m_SizeDelta: {x: 16, y: 44}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &6519208729649266261
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 861963112066109388}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00f84c531e427d64bb72cc8d9e1811ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumpForce: 335
-  m_MovementSmoothing: 0.05
-  isGround:
-    serializedVersion: 2
-    m_Bits: 791
-  groundCheck: {fileID: 6170406322809519862}
-  airControl: 1
-  OnLandEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &4748587072722842247
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 861963112066109388}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32b6ac3e13b5d174cb84ed6634c65266, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  newAlterId: 0
-  newLiarId: 0
-  newNormalId: 0
-  changePanel: 0
-  openPanel: 0
-  openLiarButton: 0
-  openNormalButton: 0
-  openAlterButton: 0
-  openDeclineButton: 0
-  goal: 0
 --- !u!50 &1431632905032387857
 Rigidbody2D:
   serializedVersion: 4
@@ -933,33 +884,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 20.111084, y: 43.75553}
   m_EdgeRadius: 0
---- !u!114 &6755170607459803962
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 861963112066109388}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5087355efb7f3ec4485d06b60a063b14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controller: {fileID: 6519208729649266261}
-  animator: {fileID: 0}
-  rigid: {fileID: 1431632905032387857}
-  runSpeed: 40
-  basecoinCount: 6
-  actualCoinCount: 0
-  talk: {fileID: 5180814655676190896}
-  talkES: {fileID: 7729042654738980220}
-  pause: {fileID: 5180814655693209609}
-  talkingControl: 0
-  close: 0
-  open: 0
-  isTalking: 0
-  isTalkingES: 0
-  isPaused: 0
 --- !u!1 &861963112298284751
 GameObject:
   m_ObjectHideFlags: 0
@@ -1325,7 +1249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 090a752bede41ef488a96440986a42a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 861963112066109379}
+  target: {fileID: 0}
   smoothSpeed: 10
   offSet: {x: 0.1, y: 3.71, z: 0}
 --- !u!1 &861963112940977429
@@ -1491,7 +1415,7 @@ MonoBehaviour:
   actualIDText: 0
   language: 0
   textDisplay: {fileID: 1620612334371391935}
-  getData: {fileID: 4748587072722842247}
+  getData: {fileID: 0}
   openAlterButton: 0
   openNormalButton: 0
   openLiarButton: 0
@@ -1516,7 +1440,7 @@ MonoBehaviour:
   alterAcceptButton: {fileID: 861963112298284751}
   declineButton: {fileID: 861963112569267918}
   secondLiarText: {fileID: 0}
-  getData: {fileID: 4748587072722842247}
+  getData: {fileID: 0}
   coins: {fileID: 5180814654708375470}
   language: 0
   honestNumber: 0
@@ -1560,7 +1484,7 @@ MonoBehaviour:
   maxScore: 0
   scoreText: {fileID: 4968764193939571720}
   liarAcept: {fileID: 5180814655676190896}
-  data: {fileID: 4748587072722842247}
+  data: {fileID: 0}
   liarAceptES: {fileID: 7729042654738980220}
   liarSpoken: 0
 --- !u!114 &7729042654738980220
@@ -1582,7 +1506,7 @@ MonoBehaviour:
   alterAcceptButton: {fileID: 5480830213896722059}
   declineButton: {fileID: 7908972451817395763}
   secondLiarText: {fileID: 0}
-  getData: {fileID: 4748587072722842247}
+  getData: {fileID: 0}
   coins: {fileID: 5180814654708375470}
   language: 0
   honestNumber: 0
@@ -2411,9 +2335,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 090a752bede41ef488a96440986a42a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 861963112066109379}
+  target: {fileID: 0}
   smoothSpeed: 30
-  offSet: {x: 5.38, y: 4.11, z: 0}
+  offSet: {x: 5.02, y: 4.08, z: 0}
 --- !u!1 &2018863954448931492
 GameObject:
   m_ObjectHideFlags: 0
@@ -2998,7 +2922,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 090a752bede41ef488a96440986a42a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 861963112066109379}
+  target: {fileID: 0}
   smoothSpeed: 30
   offSet: {x: -3.75, y: 4.16, z: 0}
 --- !u!114 &4106792713097461546
@@ -4159,7 +4083,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -42.97, y: 2.32}
+  m_AnchoredPosition: {x: 57, y: 2.32}
   m_SizeDelta: {x: 44.03, y: 46.97}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8167887537489940606
@@ -5376,7 +5300,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 090a752bede41ef488a96440986a42a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 861963112066109379}
+  target: {fileID: 0}
   smoothSpeed: 30
   offSet: {x: -3.75, y: 4.16, z: 0}
 --- !u!114 &5180814655693209609
