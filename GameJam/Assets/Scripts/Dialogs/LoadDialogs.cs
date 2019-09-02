@@ -19,7 +19,7 @@ public class LoadDialogs : MonoBehaviour
 
     List<Dialog> dialogArrays = new List<Dialog>();
     public bool panel = false;
-    public bool liarpanel = false;
+   // public bool liarpanel = false;
 
     void Update()
     {
@@ -76,7 +76,6 @@ public class LoadDialogs : MonoBehaviour
         {
             foreach (Dialog dialog in dialogArrays)
             {
-                
                 if (dialog.id == actualIDText)
                 {
                     textDisplay.text = dialog.text;
@@ -94,7 +93,6 @@ public class LoadDialogs : MonoBehaviour
 
             if (row[1] != "")
             {
-
                 Dialog dialog = new Dialog();
 
                 int.TryParse(row[0], out dialog.id);

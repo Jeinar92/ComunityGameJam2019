@@ -15,7 +15,7 @@ public class DialogManagerES : MonoBehaviour
     [SerializeField] DataManager getData;                                  // Import dataManager script
     [SerializeField] CoinsCount coins;                                     // Import cains script
     [SerializeField] int language;
-
+    
     [SerializeField] int honestNumber = 0;                                 // Number of honest NPC spoken
     public bool open = false;                                              // Boolean to check whether dialog box is open
     public bool close = false;                                             // Boolean to check whether dialog box is close
@@ -26,7 +26,7 @@ public class DialogManagerES : MonoBehaviour
     public bool talking;                                                   //  Bolean to check wheter we are taling or not
     public bool liarSpoken = false;                                        // Boolean to get the import from Coins Script check whether we are speaking to new honest NPC
     public bool secondLiarTalking = false;                                 // Boolean to check if second Liar text is talking
-    public int liarvalue = 0;                                              // Int to export if liar was spoken
+    public int liarValueES = 0;                                              // Int to export if liar was spoken
 
 
     void Update()
@@ -41,7 +41,7 @@ public class DialogManagerES : MonoBehaviour
 
         if (liarSpoken == true)
         {
-            liarvalue = 0;
+            liarValueES = 0;
             liarSpoken = false;
             secondLiarText.SetActive(true);
         }
@@ -114,7 +114,7 @@ public class DialogManagerES : MonoBehaviour
 
     public void AcceptLiarButton()
     {
-        liarvalue++;
+        liarValueES++;
         ClosePanel();
     }
 

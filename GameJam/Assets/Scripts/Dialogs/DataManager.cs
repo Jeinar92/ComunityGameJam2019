@@ -39,6 +39,7 @@ public class DataManager : MonoBehaviour
         }
         else if (collision.gameObject.tag == "SpokenLiar")
         {
+            collision.gameObject.GetComponent<BoxCollider2D>().enabled = false;
             openPanel = false;
             openLiarButton = false;
             openDeclineButton = false;
@@ -119,7 +120,7 @@ public class DataManager : MonoBehaviour
         {
             changePanel = true;
             Debug.Log(newNormalId);
-            collision.gameObject.name = "SpokenNormal";
+           // collision.gameObject.name = "SpokenNormal";
             collision.gameObject.tag = "SpokenNormal";
         }
     }

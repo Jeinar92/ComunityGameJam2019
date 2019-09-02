@@ -15,10 +15,10 @@ GameObject:
   - component: {fileID: 6526390257635569876}
   - component: {fileID: 6526390257635569887}
   - component: {fileID: 6526390257635569885}
-  - component: {fileID: 6812571903543406772}
+  - component: {fileID: 972424450373195590}
   m_Layer: 0
   m_Name: Liar
-  m_TagString: AlterEgo
+  m_TagString: Liar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -98,7 +98,7 @@ Animation:
   serializedVersion: 3
   m_Animation: {fileID: 7400000, guid: 24ac49143fc0df6489a0fb18795c5176, type: 2}
   m_Animations:
-  - {fileID: 7400000, guid: 24ac49143fc0df6489a0fb18795c5176, type: 2}
+  - {fileID: 0}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 1
@@ -182,7 +182,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 2.15}
   m_EdgeRadius: 0
---- !u!114 &6812571903543406772
+--- !u!114 &972424450373195590
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

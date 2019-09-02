@@ -8,7 +8,7 @@ AnimationClip:
   m_PrefabAsset: {fileID: 0}
   m_Name: Ego_Liar_idle
   serializedVersion: 6
-  m_Legacy: 1
+  m_Legacy: 0
   m_Compressed: 0
   m_UseHighQualityCurve: 1
   m_RotationCurves: []
@@ -22,19 +22,19 @@ AnimationClip:
     - time: 0
       value: {fileID: -2349530750556119654, guid: 4b35bc4d74c3d5b4bbe5fb3a234b79e6,
         type: 3}
-    - time: 0.083333336
+    - time: 0.5
       value: {fileID: 929238953242114326, guid: 4b35bc4d74c3d5b4bbe5fb3a234b79e6,
         type: 3}
-    - time: 0.16666667
+    - time: 1.0166667
       value: {fileID: -492597599407282180, guid: 4b35bc4d74c3d5b4bbe5fb3a234b79e6,
         type: 3}
-    - time: 0.26666668
+    - time: 1.5
       value: {fileID: -7897511647010802827, guid: 4b35bc4d74c3d5b4bbe5fb3a234b79e6,
         type: 3}
-    - time: 0.35
+    - time: 2.0166667
       value: {fileID: 6291562704632268971, guid: 4b35bc4d74c3d5b4bbe5fb3a234b79e6,
         type: 3}
-    - time: 0.45
+    - time: 2.5166667
       value: {fileID: -4222992464199093307, guid: 4b35bc4d74c3d5b4bbe5fb3a234b79e6,
         type: 3}
     attribute: m_Sprite
@@ -47,14 +47,27 @@ AnimationClip:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
   m_ClipBindingConstant:
-    genericBindings: []
-    pptrCurveMapping: []
+    genericBindings:
+    - serializedVersion: 2
+      path: 0
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+    pptrCurveMapping:
+    - {fileID: -2349530750556119654, guid: 4b35bc4d74c3d5b4bbe5fb3a234b79e6, type: 3}
+    - {fileID: 929238953242114326, guid: 4b35bc4d74c3d5b4bbe5fb3a234b79e6, type: 3}
+    - {fileID: -492597599407282180, guid: 4b35bc4d74c3d5b4bbe5fb3a234b79e6, type: 3}
+    - {fileID: -7897511647010802827, guid: 4b35bc4d74c3d5b4bbe5fb3a234b79e6, type: 3}
+    - {fileID: 6291562704632268971, guid: 4b35bc4d74c3d5b4bbe5fb3a234b79e6, type: 3}
+    - {fileID: -4222992464199093307, guid: 4b35bc4d74c3d5b4bbe5fb3a234b79e6, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.46666667
+    m_StopTime: 2.5333333
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

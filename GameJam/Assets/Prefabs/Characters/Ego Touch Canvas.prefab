@@ -1420,7 +1420,6 @@ MonoBehaviour:
   openNormalButton: 0
   openLiarButton: 0
   panel: 0
-  liarpanel: 0
 --- !u!114 &5180814655676190896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1450,7 +1449,6 @@ MonoBehaviour:
   openNormalButton: 0
   openAlterButton: 0
   openDeclineButton: 0
-  id: 0
   talking: 0
   liarSpoken: 0
   secondLiarTalking: 0
@@ -1476,7 +1474,6 @@ MonoBehaviour:
   endLvl: 0
   liarValueES: 0
   liarValue: 1
-  postLiarValue: 0
   liarScore: 0
   finalScore: 0
   totalScore: 0
@@ -1510,8 +1507,8 @@ MonoBehaviour:
   coins: {fileID: 5180814654708375470}
   language: 0
   honestNumber: 0
-  open: 0
-  close: 0
+  open: 1
+  close: 1
   openLiarButton: 0
   openNormalButton: 0
   openAlterButton: 0
@@ -1519,7 +1516,7 @@ MonoBehaviour:
   talking: 0
   liarSpoken: 0
   secondLiarTalking: 0
-  liarvalue: 0
+  liarValueES: 0
 --- !u!114 &454806423
 MonoBehaviour:
   m_ObjectHideFlags: 0
