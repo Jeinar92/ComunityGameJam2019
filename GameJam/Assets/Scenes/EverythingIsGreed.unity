@@ -134,7 +134,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 450708641}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 55d7172521a946c46b57916942ed4a57, type: 2}
   m_CullingMode: 0
@@ -211,6 +211,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!111 &573334991 stripped
+Animation:
+  m_CorrespondingSourceObject: {fileID: 3479613237921235826, guid: c9d5afe7ac3acf74db47e25dd26cdef4,
+    type: 3}
+  m_PrefabInstance: {fileID: 3070555158339189425}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1047533843
 GameObject:
   m_ObjectHideFlags: 0
@@ -512,6 +518,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3479613237921235838, guid: c9d5afe7ac3acf74db47e25dd26cdef4,
+        type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 573334991}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9d5afe7ac3acf74db47e25dd26cdef4, type: 3}
 --- !u!1001 &3185959240309118040
@@ -1373,7 +1384,7 @@ PrefabInstance:
     - target: {fileID: 9187244597976741180, guid: 9907da01ff19425478022a088359211d,
         type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8570682030234353505, guid: 9907da01ff19425478022a088359211d,
         type: 3}

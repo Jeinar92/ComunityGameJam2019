@@ -11,7 +11,7 @@ public class IDmanager : MonoBehaviour
         if (collision.gameObject.tag == "Spawn")
         {
             alterID = collision.gameObject.GetComponent<NpcSpawn>().IDgiver;
-            collision.gameObject.GetComponent<Collider2D>().enabled = false;
+            collision.gameObject.GetComponent<Collider2D>().isTrigger = true;
 
             Debug.Log("ID GIVEN");
         }
