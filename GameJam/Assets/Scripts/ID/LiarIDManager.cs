@@ -11,6 +11,7 @@ public class LiarIDManager : MonoBehaviour
         if (collision.gameObject.tag == "Spawn")
         {
             liarID = collision.gameObject.GetComponent<NpcSpawn>().IDgiver;
+            collision.gameObject.GetComponent<SpriteRenderer>().enabled = false;
             collision.gameObject.GetComponent<Collider2D>().enabled = false;
             Debug.Log("ID GIVEN");
         }

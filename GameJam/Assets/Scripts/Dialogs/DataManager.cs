@@ -120,7 +120,7 @@ public class DataManager : MonoBehaviour
         {
             changePanel = true;
             Debug.Log(newNormalId);
-           // collision.gameObject.name = "SpokenNormal";
+            collision.gameObject.name = "SpokenNormal";
             collision.gameObject.tag = "SpokenNormal";
         }
     }

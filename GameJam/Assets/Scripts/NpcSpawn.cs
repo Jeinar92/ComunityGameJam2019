@@ -7,6 +7,7 @@ public class NpcSpawn : MonoBehaviour
 
     public float IDgiver;                                             // Var for sendding id to alterprefab at spawn
     public GameObject spawnPrefab;
+    [SerializeField] Animation anim;
 
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -14,6 +15,9 @@ public class NpcSpawn : MonoBehaviour
         if (collision.gameObject.tag == "player")
         {
             Instantiate(spawnPrefab, this.transform.position, Quaternion.identity);
+            this.gameObject.GetComponent<SpriteRenderer>().enabled = true;
+            anim.wrapMode = WrapMode.Once;
+           
         }
     }
     

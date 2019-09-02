@@ -21,12 +21,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu_Scores.unity
     guid: f251970853ea68c43a6ced9dd3f5b8cc
   - enabled: 1
-    path: Assets/Scenes/securityScene.unity
-    guid: a45f0fa703c59b5499f6e66900ac4061
+    path: Assets/Scenes/EverythingIsGreed.unity
+    guid: 9fec8ea24eb33df42acfac2cbb3cb04f
   - enabled: 1
     path: Assets/Scenes/Score_EverythingIsGreed.unity
     guid: d65c89bc9238a924a8b6737832a1d9a5
   - enabled: 1
-    path: Assets/Scenes/EverythingIsGreed.unity
-    guid: 9fec8ea24eb33df42acfac2cbb3cb04f
+    path: Assets/Scenes/securityScene.unity
+    guid: a45f0fa703c59b5499f6e66900ac4061
   m_configObjects: {}

@@ -4,10 +4,10 @@ using System.Collections;
 public class playAnimationScript : MonoBehaviour
 {
 
-    [SerializeField] Animation yourAnimation;
+    [SerializeField] Animation anim;
 
     void Update()
     {
-            yourAnimation.Play();        
+            anim.Play();        
     }
 }
