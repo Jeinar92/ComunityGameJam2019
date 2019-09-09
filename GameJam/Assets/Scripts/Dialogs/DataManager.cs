@@ -39,6 +39,7 @@ public class DataManager : MonoBehaviour
         }
         else if (collision.gameObject.tag == "SpokenLiar")
         {
+            collision.gameObject.GetComponent<BoxCollider2D>().enabled = false;
             openPanel = false;
             openLiarButton = false;
             openDeclineButton = false;

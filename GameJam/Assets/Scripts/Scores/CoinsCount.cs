@@ -17,19 +17,20 @@ public class CoinsCount : MonoBehaviour
 
     [SerializeField] int liarValueES = 0;
     [SerializeField] int liarValue = 0;                                     // Its value is 1 if Liar is acepted and 0 if not or not spoken
-    [SerializeField] int postLiarValue = 0;                                 // int to save liar value before it gets reset
+   // [SerializeField] int postLiarValue = 0;                                 // int to save liar value before it gets reset
     [SerializeField] int liarScore;
     [SerializeField] int finalScore;                                       // int where we save formula of final score of the level
     [SerializeField] int totalScore;                                    // negative finalscore saved on a string
     [SerializeField] int highestScore;                                     // int where we save the highest Score obtained                               
     [SerializeField] int maxScore;
 
+   
     [SerializeField] TextMeshProUGUI scoreText;                             // TMpro import for changing scoreText
     [SerializeField] DialogManager liarAcept;                               // Import script DialogManager to get info from it
     [SerializeField] DataManager data;                                      // Import script DataManager to get info from it
     [SerializeField] DialogManagerES liarAceptES;
     public bool liarSpoken = false;                                                 // Bool to export if liar was spoken after changing scoreText
-
+    private int language;
 
     private void Start()
     {
@@ -39,9 +40,17 @@ public class CoinsCount : MonoBehaviour
     private void Update()
     {
         endLvl = data.goal;
+        language = PlayerPrefs.GetInt("language");
         
+        if (language == 0)
+        {
             liarValue = liarAcept.liarvalue;
-            liarValueES = liarAceptES.liarvalue;
+        } else if (language == 1)
+        {
+
+            liarValue = liarAceptES.liarValueES;
+        }
+           
         
         if (added == true)
         {
@@ -90,11 +99,11 @@ public class CoinsCount : MonoBehaviour
 
     private void LiarValueCheck()
     {
-        if ((liarValue == 1) || (liarValueES == 1))
+        if (liarValue == 1)
         {
             currentCoins = 6 - alterAccepted;
             scoreText.text = currentCoins.ToString();
-            postLiarValue++;
+          //  postLiarValue++;
             liarSpoken = true;
             added = false;
         }

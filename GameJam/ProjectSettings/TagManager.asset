@@ -11,6 +11,8 @@ TagManager:
   - NormalObject
   - SpokenNormal
   - Goal
+  - player
+  - Spawn
   layers:
   - Default
   - TransparentFX

@@ -22,18 +22,15 @@ public class DialogManager : MonoBehaviour
     public bool openLiarButton = false;                                    // Boolean to check whether liar button is open
     public bool openNormalButton = false;                                  // Boolean to check whether normal button is open
     public bool openAlterButton = false;                                   // Boolean to check whether liar button is open
-    public bool openDeclineButton = false;
-    public float id;                                                      
+    public bool openDeclineButton = false;                                   
     public bool talking;                                                   //  Bolean to check wheter we are taling or not
     public bool liarSpoken = false;                                        // Boolean to get the import from Coins Script check whether we are speaking to new honest NPC
     public bool secondLiarTalking = false;                                 // Boolean to check if second Liar text is talking
     public int liarvalue = 0;                                              // Int to export if liar was spoken
-
-   
+       
 
     void Update()
-    {
-        Debug.Log(language);        
+    {     
 
         liarSpoken = coins.liarSpoken;
         open = getData.openPanel;
