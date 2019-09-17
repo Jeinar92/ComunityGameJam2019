@@ -28,6 +28,7 @@ public class CoinsCount : MonoBehaviour
     [SerializeField] DialogManager liarAcept;                               // Import script DialogManager to get info from it
     [SerializeField] DataManager data;                                      // Import script DataManager to get info from it
     [SerializeField] DialogManagerES liarAceptES;
+    [SerializeField] AudioSource coinSound;                                 // Import coin gain sound;
     public bool liarSpoken = false;                                                 // Bool to export if liar was spoken after changing scoreText
     private int language;
 
@@ -131,10 +132,12 @@ public class CoinsCount : MonoBehaviour
         baseCoins--;
         alterAccepted++;
         added = true;
+        coinSound.Play();
 
         if (liarSpoken)
         {
             afterLiar_AlterAccepted++;
+            coinSound.Play();
         }
     }
 }

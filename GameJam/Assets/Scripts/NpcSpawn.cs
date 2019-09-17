@@ -15,7 +15,7 @@ public class NpcSpawn : MonoBehaviour
         if (collision.gameObject.tag == "player")
         {
             Instantiate(spawnPrefab, this.transform.position, Quaternion.identity);
-          
+            
            
         }
     }
