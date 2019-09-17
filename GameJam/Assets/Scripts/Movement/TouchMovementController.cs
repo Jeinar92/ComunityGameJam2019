@@ -8,7 +8,6 @@ public class TouchMovementController : MonoBehaviour
     public CharacterController2D controller;
     //esto es para conectar el componente animator al script
     public Animator animator;
-    [SerializeField] AudioSource walkSound;
 
 
     [SerializeField] Rigidbody2D rigid;
@@ -72,7 +71,6 @@ public class TouchMovementController : MonoBehaviour
         {
             // Move our character       
             controller.Move(horizontalMove * Time.fixedDeltaTime, jump);
-            walkSound.Play();
             jump = false;
         }
     }
