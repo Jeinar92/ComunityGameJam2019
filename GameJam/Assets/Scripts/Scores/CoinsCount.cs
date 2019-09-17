@@ -17,14 +17,13 @@ public class CoinsCount : MonoBehaviour
 
     [SerializeField] int liarValueES = 0;
     [SerializeField] int liarValue = 0;                                     // Its value is 1 if Liar is acepted and 0 if not or not spoken
-   // [SerializeField] int postLiarValue = 0;                                 // int to save liar value before it gets reset
     [SerializeField] int liarScore;
     [SerializeField] int finalScore;                                       // int where we save formula of final score of the level
     [SerializeField] int totalScore;                                    // negative finalscore saved on a string
     [SerializeField] int highestScore;                                     // int where we save the highest Score obtained                               
     [SerializeField] int maxScore;
 
-   
+
     [SerializeField] TextMeshProUGUI scoreText;                             // TMpro import for changing scoreText
     [SerializeField] DialogManager liarAcept;                               // Import script DialogManager to get info from it
     [SerializeField] DataManager data;                                      // Import script DataManager to get info from it
@@ -91,7 +90,6 @@ public class CoinsCount : MonoBehaviour
                 PlayerPrefs.SetInt("highestScoreLvl1", highestScore);
                 Debug.Log("New record : " + highestScore);
             }
-
             PlayerPrefs.SetInt("currentCoins", currentCoins);
             SceneManager.LoadScene(6);
         }
