@@ -17,6 +17,7 @@ public class TouchMovementController : MonoBehaviour
     [SerializeField] DialogManager talk;
     [SerializeField] DialogManagerES talkES;
     [SerializeField] Pause pause;
+    [SerializeField] AudioSource jump_char_Sound;
 
 
 
@@ -53,6 +54,8 @@ public class TouchMovementController : MonoBehaviour
             if (CrossPlatformInputManager.GetButtonDown("Jump"))
             {
                 jump = true;
+                jump_char_Sound.Play();
+
             }
         }
 

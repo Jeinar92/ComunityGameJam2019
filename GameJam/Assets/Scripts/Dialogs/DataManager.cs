@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DataManager : MonoBehaviour
 {
+
     public float newAlterId;                                    //Alter Id got from collision
     public float newLiarId;                                     //Liar id got from collision
     public float newNormalId;                                   //Normal id got from collision
@@ -52,17 +53,18 @@ public class DataManager : MonoBehaviour
             openNormalButton = true;
         }        
         else if (collision.gameObject.tag == "Goal")
-        {
+        {            
             NormalIDGetter(collision);
             openPanel = true;
             openNormalButton = true;
             goal = true;
+            
 
-        }else if (collision.gameObject.tag == "SpokenNormal")
+        }
+        else if (collision.gameObject.tag == "SpokenNormal")
         {
             openPanel = false;
             openNormalButton = false;
-            goal = false;
         }
         
     }
